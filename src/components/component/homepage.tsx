@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { RoughNotation } from "react-rough-notation";
 
 export default function homepage() {
   return (
@@ -24,10 +25,28 @@ export default function homepage() {
             </div>
             <div className="space-y-4">
               <p className="text-gray-500 md:text-xl/relaxed dark:text-gray-400">
-                I’m a designer and developer based in New York. I love creating
-                beautiful and functional user interfaces. Currently, I’m
-                exploring the world of generative art and experimenting with
-                different ways to combine code and creativity.
+                I’m a{" "}
+                <RoughNotation
+                  type="highlight"
+                  color="#ADD8E6"
+                  show={true}
+                  animationDelay={500}
+                >
+                  designer{" "}
+                </RoughNotation>
+                and
+                <RoughNotation
+                  type="circle"
+                  color="#ADD8E6"
+                  show={true}
+                  animationDelay={1000}
+                >
+                  developer{" "}
+                </RoughNotation>{" "}
+                based in New York. I love creating beautiful and functional user
+                interfaces. Currently, I’m exploring the world of generative art
+                and experimenting with different ways to combine code and
+                creativity.
               </p>
               <div className="grid gap-2 md:grid-cols-2">
                 <div>
@@ -65,37 +84,93 @@ export default function homepage() {
             <div className="grid gap-4 md:gap-6 lg:gap-8">
               <div className="grid gap-2 md:grid-cols-2">
                 <div className="inline-flex items-center space-x-2">
-                  <LayoutIcon className="w-5 h-5" />
+                  <RoughNotation
+                    type="highlight"
+                    color="#007BFF"
+                    show={true}
+                    animationDelay={1000}
+                  >
+                    <LayoutIcon className="w-5 h-5" />
+                  </RoughNotation>
                   <span className="font-medium">Design</span>
                 </div>
                 <div className="inline-flex items-center space-x-2">
-                  <ComponentIcon className="w-5 h-5" />
+                  <RoughNotation
+                    type="highlight"
+                    color="#007BFF"
+                    show={true}
+                    animationDelay={1000}
+                  >
+                    <ComponentIcon className="w-5 h-5" />
+                  </RoughNotation>
                   <span className="font-medium">React</span>
                 </div>
                 <div className="inline-flex items-center space-x-2">
-                  <WindIcon className="w-5 h-5" />
+                  <RoughNotation
+                    type="highlight"
+                    color="#007BFF"
+                    show={true}
+                    animationDelay={1000}
+                  >
+                    <WindIcon className="w-5 h-5" />
+                  </RoughNotation>
                   <span className="font-medium">Tailwind CSS</span>
                 </div>
                 <div className="inline-flex items-center space-x-2">
-                  <TypeIcon className="w-5 h-5" />
+                  <RoughNotation
+                    type="highlight"
+                    color="#007BFF"
+                    show={true}
+                    animationDelay={1000}
+                  >
+                    <TypeIcon className="w-5 h-5" />
+                  </RoughNotation>
                   <span className="font-medium">TypeScript</span>
                 </div>
               </div>
               <div className="grid gap-2 md:grid-cols-2">
                 <div className="inline-flex items-center space-x-2">
-                  <FigmaIcon className="w-5 h-5" />
+                  <RoughNotation
+                    type="highlight"
+                    color="#007BFF"
+                    show={true}
+                    animationDelay={1000}
+                  >
+                    <FigmaIcon className="w-5 h-5" />
+                  </RoughNotation>
                   <span className="font-medium">Figma</span>
                 </div>
                 <div className="inline-flex items-center space-x-2">
-                  <NavigationIcon className="w-5 h-5" />
+                  <RoughNotation
+                    type="highlight"
+                    color="#007BFF"
+                    show={true}
+                    animationDelay={1000}
+                  >
+                    <NavigationIcon className="w-5 h-5" />
+                  </RoughNotation>
                   <span className="font-medium">Next.js</span>
                 </div>
                 <div className="inline-flex items-center space-x-2">
-                  <GithubIcon className="w-5 h-5" />
+                  <RoughNotation
+                    type="highlight"
+                    color="#007BFF"
+                    show={true}
+                    animationDelay={1000}
+                  >
+                    <GithubIcon className="w-5 h-5" />
+                  </RoughNotation>
                   <span className="font-medium">GitHub</span>
                 </div>
                 <div className="inline-flex items-center space-x-2">
-                  <CodeIcon className="w-5 h-5" />
+                  <RoughNotation
+                    type="highlight"
+                    color="#007BFF"
+                    show={true}
+                    animationDelay={1000}
+                  >
+                    <CodeIcon className="w-5 h-5" />
+                  </RoughNotation>
                   <span className="font-medium">VS Code</span>
                 </div>
               </div>
@@ -116,25 +191,46 @@ export default function homepage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
-                <Link className="font-medium underline" href="#">
-                  Project 1
-                </Link>
+                <RoughNotation
+                  type="highlight"
+                  color="#007BFF"
+                  show={true}
+                  animationDelay={1000}
+                >
+                  <Link className="font-medium underline" href="#">
+                    Project 1
+                  </Link>
+                </RoughNotation>
                 <p className="text-sm text-gray-500">
                   Description of project 1.
                 </p>
               </div>
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
-                <Link className="font-medium underline" href="#">
-                  Project 2
-                </Link>
+                <RoughNotation
+                  type="highlight"
+                  color="#007BFF"
+                  show={true}
+                  animationDelay={1000}
+                >
+                  <Link className="font-medium underline" href="#">
+                    Project 2
+                  </Link>
+                </RoughNotation>
                 <p className="text-sm text-gray-500">
                   Description of project 2.
                 </p>
               </div>
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
-                <Link className="font-medium underline" href="#">
-                  Project 3
-                </Link>
+                <RoughNotation
+                  type="highlight"
+                  color="#FFD700"
+                  show={true}
+                  animationDelay={1000}
+                >
+                  <Link className="font-medium underline" href="#">
+                    Project 3
+                  </Link>
+                </RoughNotation>
                 <p className="text-sm text-gray-500">
                   Description of project 3.
                 </p>
