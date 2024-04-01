@@ -10,6 +10,13 @@ import { Button } from "@/components/ui/button";
 import { RoughNotation } from "react-rough-notation";
 
 export default function homepage() {
+  const initialDelay = 500;
+  const delayConst = 1000;
+
+  const delayTiming = (index: number) => {
+    return initialDelay + index * delayConst;
+  };
+
   return (
     <>
       <div className="bg-gray-50 dark:bg-gray-900 py-12 lg:py-24 xl:py-32">
@@ -25,28 +32,54 @@ export default function homepage() {
             </div>
             <div className="space-y-4">
               <p className="text-gray-500 md:text-xl/relaxed dark:text-gray-400">
-                I’m a{" "}
+                An{" "}
                 <RoughNotation
-                  type="highlight"
+                  type="box"
                   color="#ADD8E6"
                   show={true}
-                  animationDelay={500}
+                  animationDelay={delayTiming(0)}
                 >
-                  designer{" "}
+                  outgoing{" "}
                 </RoughNotation>
-                and
+                ,{" "}
+                <RoughNotation
+                  type="underline"
+                  color="#ADD8E6"
+                  show={true}
+                  animationDelay={delayTiming(1)}
+                >
+                  highly motivated{" "}
+                </RoughNotation>
+                , team worker, with a strong ability for{" "}
                 <RoughNotation
                   type="circle"
                   color="#ADD8E6"
                   show={true}
-                  animationDelay={1000}
+                  animationDelay={delayTiming(3)}
                 >
-                  developer{" "}
+                  communication{" "}
                 </RoughNotation>{" "}
-                based in New York. I love creating beautiful and functional user
-                interfaces. Currently, I’m exploring the world of generative art
-                and experimenting with different ways to combine code and
-                creativity.
+                and supporting the development of others.
+                <RoughNotation
+                  type="box"
+                  color="#ADD8E6"
+                  show={true}
+                  animationDelay={delayTiming(4)}
+                >
+                  Highly technically competent{" "}
+                </RoughNotation>{" "}
+                , with a specific interest in data science, machine learning and
+                problem-solving. An exceptional academic record and the{" "}
+                <RoughNotation
+                  type="circle"
+                  color="#ADD8E6"
+                  show={true}
+                  animationDelay={delayTiming(5)}
+                >
+                  enthusiasm{" "}
+                </RoughNotation>{" "}
+                to adapt to new challenges. Currently studying a degree in
+                computer science at the University of Bath.
               </p>
               <div className="grid gap-2 md:grid-cols-2">
                 <div>
