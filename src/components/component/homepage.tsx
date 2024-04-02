@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { RoughNotation } from "react-rough-notation";
+import { useInView } from "react-intersection-observer";
 
 export default function homepage() {
   const initialDelay = 500;
@@ -16,6 +17,10 @@ export default function homepage() {
   const delayTiming = (index: number) => {
     return initialDelay + index * delayConst;
   };
+
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
+  });
 
   return (
     <>
@@ -39,7 +44,7 @@ export default function homepage() {
                   show={true}
                   animationDelay={delayTiming(0)}
                 >
-                  outgoing{" "}
+                  outgoing
                 </RoughNotation>
                 ,{" "}
                 <RoughNotation
@@ -48,7 +53,7 @@ export default function homepage() {
                   show={true}
                   animationDelay={delayTiming(1)}
                 >
-                  highly motivated{" "}
+                  highly motivated
                 </RoughNotation>
                 , team worker, with a strong ability for{" "}
                 <RoughNotation
@@ -58,10 +63,10 @@ export default function homepage() {
                   animationDelay={delayTiming(3)}
                 >
                   communication{" "}
-                </RoughNotation>{" "}
+                </RoughNotation>
                 and supporting the development of others.
                 <RoughNotation
-                  type="box"
+                  type="underline"
                   color="#ADD8E6"
                   show={true}
                   animationDelay={delayTiming(4)}
@@ -114,14 +119,14 @@ export default function homepage() {
                 I’m experienced with a variety of design and development tools.
               </p>
             </div>
-            <div className="grid gap-4 md:gap-6 lg:gap-8">
+            <div className="grid gap-4 md:gap-6 lg:gap-8" ref={ref}>
               <div className="grid gap-2 md:grid-cols-2">
                 <div className="inline-flex items-center space-x-2">
                   <RoughNotation
                     type="highlight"
                     color="#007BFF"
-                    show={true}
-                    animationDelay={1000}
+                    show={inView}
+                    animationDelay={delayTiming(1)}
                   >
                     <LayoutIcon className="w-5 h-5" />
                   </RoughNotation>
@@ -131,8 +136,8 @@ export default function homepage() {
                   <RoughNotation
                     type="highlight"
                     color="#007BFF"
-                    show={true}
-                    animationDelay={1000}
+                    show={inView}
+                    animationDelay={delayTiming(1)}
                   >
                     <ComponentIcon className="w-5 h-5" />
                   </RoughNotation>
@@ -142,8 +147,8 @@ export default function homepage() {
                   <RoughNotation
                     type="highlight"
                     color="#007BFF"
-                    show={true}
-                    animationDelay={1000}
+                    show={inView}
+                    animationDelay={delayTiming(1)}
                   >
                     <WindIcon className="w-5 h-5" />
                   </RoughNotation>
@@ -153,8 +158,8 @@ export default function homepage() {
                   <RoughNotation
                     type="highlight"
                     color="#007BFF"
-                    show={true}
-                    animationDelay={1000}
+                    show={inView}
+                    animationDelay={delayTiming(1)}
                   >
                     <TypeIcon className="w-5 h-5" />
                   </RoughNotation>
@@ -166,8 +171,8 @@ export default function homepage() {
                   <RoughNotation
                     type="highlight"
                     color="#007BFF"
-                    show={true}
-                    animationDelay={1000}
+                    show={inView}
+                    animationDelay={delayTiming(1)}
                   >
                     <FigmaIcon className="w-5 h-5" />
                   </RoughNotation>
@@ -177,8 +182,8 @@ export default function homepage() {
                   <RoughNotation
                     type="highlight"
                     color="#007BFF"
-                    show={true}
-                    animationDelay={1000}
+                    show={inView}
+                    animationDelay={delayTiming(1)}
                   >
                     <NavigationIcon className="w-5 h-5" />
                   </RoughNotation>
@@ -188,8 +193,8 @@ export default function homepage() {
                   <RoughNotation
                     type="highlight"
                     color="#007BFF"
-                    show={true}
-                    animationDelay={1000}
+                    show={inView}
+                    animationDelay={delayTiming(1)}
                   >
                     <GithubIcon className="w-5 h-5" />
                   </RoughNotation>
@@ -199,8 +204,8 @@ export default function homepage() {
                   <RoughNotation
                     type="highlight"
                     color="#007BFF"
-                    show={true}
-                    animationDelay={1000}
+                    show={inView}
+                    animationDelay={delayTiming(1)}
                   >
                     <CodeIcon className="w-5 h-5" />
                   </RoughNotation>
@@ -224,48 +229,35 @@ export default function homepage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
-                <RoughNotation
-                  type="highlight"
-                  color="#007BFF"
-                  show={true}
-                  animationDelay={1000}
-                >
-                  <Link className="font-medium underline" href="#">
-                    Project 1
-                  </Link>
-                </RoughNotation>
+                <Link className="font-medium underline" href="#">
+                  Project 1
+                </Link>
                 <p className="text-sm text-gray-500">
                   Description of project 1.
                 </p>
               </div>
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
-                <RoughNotation
-                  type="highlight"
-                  color="#007BFF"
-                  show={true}
-                  animationDelay={1000}
-                >
-                  <Link className="font-medium underline" href="#">
-                    Project 2
-                  </Link>
-                </RoughNotation>
+                <Link className="font-medium underline" href="#">
+                  Project 2
+                </Link>
                 <p className="text-sm text-gray-500">
                   Description of project 2.
                 </p>
               </div>
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
-                <RoughNotation
-                  type="highlight"
-                  color="#FFD700"
-                  show={true}
-                  animationDelay={1000}
-                >
-                  <Link className="font-medium underline" href="#">
-                    Project 3
-                  </Link>
-                </RoughNotation>
+                <Link className="font-medium underline" href="#">
+                  Project 3
+                </Link>
                 <p className="text-sm text-gray-500">
                   Description of project 3.
+                </p>
+              </div>
+              <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
+                <Link className="font-medium underline" href="#">
+                  Project 4
+                </Link>
+                <p className="text-sm text-gray-500">
+                  Description of project 4.
                 </p>
               </div>
             </div>
@@ -280,7 +272,7 @@ export default function homepage() {
                 Contact Me
               </h2>
               <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Want to work together? Send me a message.
+                {"Get in touch :)"}
               </p>
             </div>
             <form className="grid gap-4 md:gap-6">
