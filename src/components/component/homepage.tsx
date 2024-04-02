@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { RoughNotation } from "react-rough-notation";
 import { useInView } from "react-intersection-observer";
 
-export default function homepage() {
+export default function Homepage() {
   const initialDelay = 500;
   const delayConst = 1000;
 
@@ -216,6 +216,7 @@ export default function homepage() {
           </div>
         </div>
       </section>
+
       <section className="bg-gray-50 dark:bg-gray-900 py-12 md:py-24 lg:py-32 xl:py-48">
         <div className="container px-4 md:px-6">
           <div className="space-y-4">
