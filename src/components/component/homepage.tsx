@@ -16,6 +16,7 @@ const row1Items = [
   { name: "Tailwind CSS", Icon: WindIcon },
   { name: "TypeScript", Icon: TypeIcon },
   { name: "Kubernetes", Icon: TypeIcon },
+  { name: "Nest js", Icon: TypeIcon },
 ];
 
 const row2Items = [
@@ -24,6 +25,7 @@ const row2Items = [
   { name: "Git", Icon: GithubIcon },
   { name: "SQL", Icon: CodeIcon },
   { name: "TypeScript", Icon: TypeIcon },
+  { name: "Jenkins", Icon: TypeIcon },
 ];
 
 export default function Homepage() {
