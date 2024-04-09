@@ -10,6 +10,22 @@ import { Button } from "@/components/ui/button";
 import { RoughNotation } from "react-rough-notation";
 import { useInView } from "react-intersection-observer";
 
+const row1Items = [
+  { name: "Design", Icon: LayoutIcon },
+  { name: "React", Icon: ComponentIcon },
+  { name: "Tailwind CSS", Icon: WindIcon },
+  { name: "TypeScript", Icon: TypeIcon },
+  { name: "Kubernetes", Icon: TypeIcon },
+];
+
+const row2Items = [
+  { name: "Python", Icon: TypeIcon },
+  { name: "Next.js", Icon: NavigationIcon },
+  { name: "Git", Icon: GithubIcon },
+  { name: "SQL", Icon: CodeIcon },
+  { name: "TypeScript", Icon: TypeIcon },
+];
+
 export default function Homepage() {
   const initialDelay = 500;
   const delayConst = 1000;
@@ -121,96 +137,40 @@ export default function Homepage() {
             </div>
             <div className="grid gap-4 md:gap-6 lg:gap-8" ref={ref}>
               <div className="grid gap-2 md:grid-cols-2">
-                <div className="inline-flex items-center space-x-2">
-                  <RoughNotation
-                    type="highlight"
-                    color="#007BFF"
-                    show={inView}
-                    animationDelay={delayTiming(1)}
+                {row1Items.map((item, index) => (
+                  <div
+                    key={index}
+                    className="inline-flex items-center space-x-2"
                   >
-                    <LayoutIcon className="w-5 h-5" />
-                  </RoughNotation>
-                  <span className="font-medium">Design</span>
-                </div>
-                <div className="inline-flex items-center space-x-2">
-                  <RoughNotation
-                    type="highlight"
-                    color="#007BFF"
-                    show={inView}
-                    animationDelay={delayTiming(1)}
-                  >
-                    <ComponentIcon className="w-5 h-5" />
-                  </RoughNotation>
-                  <span className="font-medium">React</span>
-                </div>
-                <div className="inline-flex items-center space-x-2">
-                  <RoughNotation
-                    type="highlight"
-                    color="#007BFF"
-                    show={inView}
-                    animationDelay={delayTiming(1)}
-                  >
-                    <WindIcon className="w-5 h-5" />
-                  </RoughNotation>
-                  <span className="font-medium">Tailwind CSS</span>
-                </div>
-                <div className="inline-flex items-center space-x-2">
-                  <RoughNotation
-                    type="highlight"
-                    color="#007BFF"
-                    show={inView}
-                    animationDelay={delayTiming(1)}
-                  >
-                    <TypeIcon className="w-5 h-5" />
-                  </RoughNotation>
-                  <span className="font-medium">TypeScript</span>
-                </div>
+                    <RoughNotation
+                      type="highlight"
+                      color="#007BFF"
+                      show={inView}
+                      animationDelay={delayTiming(1)}
+                    >
+                      <item.Icon className="w-5 h-5" />
+                    </RoughNotation>
+                    <span className="font-medium">{item.name}</span>
+                  </div>
+                ))}
               </div>
               <div className="grid gap-2 md:grid-cols-2">
-                <div className="inline-flex items-center space-x-2">
-                  <RoughNotation
-                    type="highlight"
-                    color="#007BFF"
-                    show={inView}
-                    animationDelay={delayTiming(1)}
+                {row2Items.map((item, index) => (
+                  <div
+                    key={index}
+                    className="inline-flex items-center space-x-2"
                   >
-                    <FigmaIcon className="w-5 h-5" />
-                  </RoughNotation>
-                  <span className="font-medium">Figma</span>
-                </div>
-                <div className="inline-flex items-center space-x-2">
-                  <RoughNotation
-                    type="highlight"
-                    color="#007BFF"
-                    show={inView}
-                    animationDelay={delayTiming(1)}
-                  >
-                    <NavigationIcon className="w-5 h-5" />
-                  </RoughNotation>
-                  <span className="font-medium">Next.js</span>
-                </div>
-                <div className="inline-flex items-center space-x-2">
-                  <RoughNotation
-                    type="highlight"
-                    color="#007BFF"
-                    show={inView}
-                    animationDelay={delayTiming(1)}
-                  >
-                    <GithubIcon className="w-5 h-5" />
-                  </RoughNotation>
-                  <span className="font-medium">GitHub</span>
-                </div>
-                <div className="inline-flex items-center space-x-2">
-                  <RoughNotation
-                    type="highlight"
-                    color="#007BFF"
-                    show={inView}
-                    animationDelay={delayTiming(1)}
-                  >
-                    <CodeIcon className="w-5 h-5" />
-                  </RoughNotation>
-                  <span className="font-medium">VS Code</span>
-                </div>
+                    <RoughNotation
+                      type="highlight"
+                      color="#007BFF"
+                      show={inView}
+                      animationDelay={delayTiming(1)}
+                    >
+                      <item.Icon className="w-5 h-5" />
+                    </RoughNotation>
+                    <span className="font-medium">{item.name}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
