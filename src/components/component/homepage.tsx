@@ -11,7 +11,7 @@ import { RoughNotation } from "react-rough-notation";
 import { useInView } from "react-intersection-observer";
 
 const row1Items = [
-  { name: "Design", Icon: LayoutIcon },
+  { name: "C", Icon: LayoutIcon },
   { name: "React", Icon: ComponentIcon },
   { name: "Tailwind CSS", Icon: WindIcon },
   { name: "TypeScript", Icon: TypeIcon },
@@ -25,7 +25,7 @@ const row2Items = [
   { name: "Git", Icon: GithubIcon },
   { name: "SQL", Icon: CodeIcon },
   { name: "TypeScript", Icon: TypeIcon },
-  { name: "Jenkins", Icon: TypeIcon },
+  { name: "CI/CD", Icon: TypeIcon },
 ];
 
 export default function Homepage() {
@@ -73,7 +73,15 @@ export default function Homepage() {
                 >
                   highly motivated
                 </RoughNotation>
-                , team worker, with a strong ability for{" "}
+                <RoughNotation
+                  type="circle"
+                  color="#ADD8E6"
+                  show={true}
+                  animationDelay={delayTiming(2)}
+                >
+                  , team worker
+                </RoughNotation>{" "}
+                ,with a strong ability for{" "}
                 <RoughNotation
                   type="circle"
                   color="#ADD8E6"
@@ -82,22 +90,15 @@ export default function Homepage() {
                 >
                   communication{" "}
                 </RoughNotation>
-                and supporting the development of others.
-                <RoughNotation
-                  type="underline"
-                  color="#ADD8E6"
-                  show={true}
-                  animationDelay={delayTiming(4)}
-                >
-                  Highly technically competent{" "}
-                </RoughNotation>{" "}
-                , with a specific interest in data science, machine learning and
-                problem-solving. An exceptional academic record and the{" "}
+                and supporting the development of others. Highly technically
+                competent , with a specific interest in data science, machine
+                learning and problem-solving. An exceptional academic record and
+                the{" "}
                 <RoughNotation
                   type="circle"
                   color="#ADD8E6"
                   show={true}
-                  animationDelay={delayTiming(5)}
+                  animationDelay={delayTiming(4)}
                 >
                   enthusiasm{" "}
                 </RoughNotation>{" "}
