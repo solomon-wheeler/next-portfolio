@@ -12,22 +12,30 @@ import { useInView } from "react-intersection-observer";
 
 const row1Items = [
   { name: "C", Icon: LayoutIcon },
+  { name: "Python", Icon: TypeIcon },
+  { name: "TypeScript/JavaScript", Icon: TypeIcon },
   { name: "React", Icon: ComponentIcon },
-  { name: "Tailwind CSS", Icon: WindIcon },
-  { name: "TypeScript", Icon: TypeIcon },
-  { name: "Kubernetes", Icon: TypeIcon },
-  { name: "Nest js", Icon: TypeIcon },
+  { name: "SQL", Icon: CodeIcon },
+  { name: "Git", Icon: GithubIcon },
 ];
 
 const row2Items = [
-  { name: "Python", Icon: TypeIcon },
+  { name: "Tailwind CSS", Icon: WindIcon },
+  { name: "Nest js", Icon: TypeIcon },
+  { name: "Kubernetes", Icon: TypeIcon },
   { name: "Next.js", Icon: NavigationIcon },
-  { name: "Git", Icon: GithubIcon },
-  { name: "SQL", Icon: CodeIcon },
   { name: "TypeScript", Icon: TypeIcon },
-  { name: "CI/CD", Icon: TypeIcon },
+  { name: "AWS", Icon: TypeIcon },
 ];
 
+const modules = [
+  { name: "Computer systems architecture 1 & 2", mark: 81 },
+  { name: "Discrete mathematics and database", mark: 95 },
+  { name: "Principles of programming 1 & 2", mark: 81 },
+  { name: "Mathematics for computation", mark: 76 },
+  { name: "Artificial intelligence", mark: 84 },
+  { name: "Software processes and modelling", mark: 68 },
+];
 export default function Homepage() {
   const initialDelay = 500;
   const delayConst = 1000;
@@ -49,12 +57,11 @@ export default function Homepage() {
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 👋 I’m Solomon Wheeler
               </h1>
-              <p className="text-gray-500 dark:text-gray-400">
-                Designer. Developer.
-              </p>
+              <p className="text-gray-500 dark:text-gray-400">Developer.</p>
             </div>
             <div className="space-y-4">
               <p className="text-gray-500 md:text-xl/relaxed dark:text-gray-400">
+                {" "}
                 An{" "}
                 <RoughNotation
                   type="box"
@@ -83,7 +90,7 @@ export default function Homepage() {
                 </RoughNotation>{" "}
                 ,with a strong ability for{" "}
                 <RoughNotation
-                  type="circle"
+                  type="underline"
                   color="#ADD8E6"
                   show={true}
                   animationDelay={delayTiming(3)}
@@ -108,19 +115,19 @@ export default function Homepage() {
               <div className="grid gap-2 md:grid-cols-2">
                 <div>
                   <h3 className="inline text-lg font-semibold">Name</h3>
-                  <p>Solomon Wheeler</p>
+                  <p>🧑‍💻Solomon Wheeler</p>
                 </div>
                 <div>
                   <h3 className="inline text-lg font-semibold">Location</h3>
-                  <p>London/Bath, UK</p>
+                  <p>📌London/Bath, UK</p>
                 </div>
                 <div>
                   <h3 className="inline text-lg font-semibold">Email</h3>
-                  <p>solly.wheeler@gmail.com</p>
+                  <p>📧solly.wheeler@gmail.com</p>
                 </div>
                 <div>
                   <h3 className="inline text-lg font-semibold">Website</h3>
-                  <p>solomonwheeler.com</p>
+                  <p>🏡solomonwheeler.com</p>
                 </div>
               </div>
             </div>
@@ -135,7 +142,9 @@ export default function Homepage() {
                 My Skills
               </h2>
               <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                I’m experienced with a variety of design and development tools.
+                I have a depth of understanding in succesfully building,
+                testing, and deploying software applications. Here are some of
+                languages and tools I have experience with:
               </p>
             </div>
             <div className="grid gap-4 md:gap-6 lg:gap-8" ref={ref}>
@@ -179,7 +188,38 @@ export default function Homepage() {
           </div>
         </div>
       </section>
-
+      <section className="py-12 md:py-24 lg:py-32 xl:py-48">
+        <div className="container px-4 md:px-6">
+          <div className="grid gap-8 md:gap-10">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                Qualifications
+              </h2>
+              <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                I am currently studying a degree in computer science at the
+                University of Bath. Here are some of the modules I have studied:
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
+                <h2 className="text-2xl font-bold">Modules</h2>
+                {modules.map((module) => (
+                  <li>{module.name}</li>
+                ))}
+              </div>
+              <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
+                <h2 className="text-2xl font-bold">Marks</h2>
+                {modules.map((module) => (
+                  <li>{module.mark}%</li>
+                ))}
+              </div>
+            </div>
+            <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              And I have the following other qualifications:
+            </p>
+          </div>
+        </div>
+      </section>
       <section className="bg-gray-50 dark:bg-gray-900 py-12 md:py-24 lg:py-32 xl:py-48">
         <div className="container px-4 md:px-6">
           <div className="space-y-4">
@@ -196,33 +236,25 @@ export default function Homepage() {
                 <Link className="font-medium underline" href="#">
                   Project 1
                 </Link>
-                <p className="text-sm text-gray-500">
-                  Description of project 1.
-                </p>
+                <p className="text-sm text-gray-500">Description </p>
               </div>
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
                 <Link className="font-medium underline" href="#">
                   Project 2
                 </Link>
-                <p className="text-sm text-gray-500">
-                  Description of project 2.
-                </p>
+                <p className="text-sm text-gray-500">Description</p>
               </div>
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
                 <Link className="font-medium underline" href="#">
                   Project 3
                 </Link>
-                <p className="text-sm text-gray-500">
-                  Description of project 3.
-                </p>
+                <p className="text-sm text-gray-500">Description</p>
               </div>
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
                 <Link className="font-medium underline" href="#">
                   Project 4
                 </Link>
-                <p className="text-sm text-gray-500">
-                  Description of project 4.
-                </p>
+                <p className="text-sm text-gray-500">Description</p>
               </div>
             </div>
           </div>
@@ -236,7 +268,7 @@ export default function Homepage() {
                 Contact Me
               </h2>
               <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                {"Get in touch :)"}
+                {"Get in touch 😀"}
               </p>
             </div>
             <form className="grid gap-4 md:gap-6">
