@@ -50,7 +50,7 @@ export default function Homepage() {
 
   return (
     <>
-      <div className="bg-gray-50 dark:bg-gray-900 py-12 lg:py-24 xl:py-32">
+      <div className="bg-gray-50 dark:bg-gray-900 py-12 lg:py-24 xl:py-32 px-2">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 md:gap-8 lg:gap-10">
             <div className="space-y-2">

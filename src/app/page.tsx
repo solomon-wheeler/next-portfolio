@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <ThemeProvider attribute="class">
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <main className="flex min-h-screen flex-col items-center justify-between">
         {/* <div className="relative inline-block w-10 align-middle select-none transition duration-200 ease-in">
           <input
             type="checkbox"
