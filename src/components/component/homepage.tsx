@@ -48,6 +48,21 @@ export default function Homepage() {
     triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
   });
 
+  const handleSubmit = async () => {
+    const response = await fetch("/api/sendEmail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (response.ok) {
+      console.log("Email sent successfully");
+    } else {
+      console.log("Error sending email");
+    }
+  };
+
   return (
     <>
       <div className="bg-gray-50 dark:bg-gray-900 py-12 lg:py-24 xl:py-32 px-2">
@@ -110,7 +125,7 @@ export default function Homepage() {
                   enthusiasm{" "}
                 </RoughNotation>{" "}
                 to adapt to new challenges. Currently studying a degree in
-                computer science at the University of Bath.
+                Computer Science at the University of Bath.
               </p>
               <div className="grid gap-2 md:grid-cols-2">
                 <div>
@@ -134,7 +149,7 @@ export default function Homepage() {
           </div>
         </div>
       </div>
-      <section className="py-12 md:py-24 lg:py-32 xl:py-48">
+      <section className="py-12 md:py-24 lg:py-32 xl:py-48" key="section2">
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 md:gap-10">
             <div className="space-y-2">
@@ -188,7 +203,7 @@ export default function Homepage() {
           </div>
         </div>
       </section>
-      <section className="py-12 md:py-24 lg:py-32 xl:py-48">
+      <section className="py-12 md:py-24 lg:py-32 xl:py-48" key="section3">
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 md:gap-10">
             <div className="space-y-2">
@@ -203,14 +218,14 @@ export default function Homepage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
                 <h2 className="text-2xl font-bold">Modules</h2>
-                {modules.map((module) => (
-                  <li>{module.name}</li>
+                {modules.map((module, index) => (
+                  <li key={index}>{module.name}</li>
                 ))}
               </div>
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
                 <h2 className="text-2xl font-bold">Marks</h2>
-                {modules.map((module) => (
-                  <li>{module.mark}%</li>
+                {modules.map((module, index) => (
+                  <li key={index}>{module.mark}%</li>
                 ))}
               </div>
             </div>
@@ -220,7 +235,7 @@ export default function Homepage() {
           </div>
         </div>
       </section>
-      <section className="bg-gray-50 dark:bg-gray-900 py-12 md:py-24 lg:py-32 xl:py-48">
+      <section className="bg-gray-50 dark:bg-gray-900 py-12 md:py-24 lg:py-32 xl:py-48" key="section4">
         <div className="container px-4 md:px-6">
           <div className="space-y-4">
             <div className="space-y-2">
@@ -260,7 +275,7 @@ export default function Homepage() {
           </div>
         </div>
       </section>
-      <section className="py-12 md:py-24 lg:py-32 xl:py-48">
+      <section className="py-12 md:py-24 lg:py-32 xl:py-48" key="section5">
         <div className="container px-4 md:px-6">
           <div className="grid gap-4 md:gap-6">
             <div className="space-y-2">
@@ -299,7 +314,9 @@ export default function Homepage() {
                   required
                 />
               </div>
-              <Button type="submit">Submit</Button>
+              <Button type="submit" onClick={handleSubmit}>
+                Submit
+              </Button>
             </form>
           </div>
         </div>
