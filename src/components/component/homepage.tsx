@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { RoughNotation } from "react-rough-notation";
 import { useInView } from "react-intersection-observer";
+import { useState, ChangeEvent } from "react";
 
 const row1Items = [
   { name: "C", Icon: LayoutIcon },
@@ -48,12 +49,30 @@ export default function Homepage() {
     triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
   });
 
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleNameChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setName(event.target.value);
+  };
+
+  const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
+  };
+
+  const handleMsgChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
+    setMessage(event.target.value);
+  };
+
   const handleSubmit = async () => {
+    const requestBody = JSON.stringify({ name, email, message });
     const response = await fetch("/api/sendEmail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
+      body: requestBody,
     });
 
     if (response.ok) {
@@ -235,7 +254,10 @@ export default function Homepage() {
           </div>
         </div>
       </section>
-      <section className="bg-gray-50 dark:bg-gray-900 py-12 md:py-24 lg:py-32 xl:py-48" key="section4">
+      <section
+        className="bg-gray-50 dark:bg-gray-900 py-12 md:py-24 lg:py-32 xl:py-48"
+        key="section4"
+      >
         <div className="container px-4 md:px-6">
           <div className="space-y-4">
             <div className="space-y-2">
@@ -291,7 +313,12 @@ export default function Homepage() {
                 <Label className="text-sm" htmlFor="name">
                   Name
                 </Label>
-                <Input id="name" placeholder="Enter your name" required />
+                <Input
+                  id="name"
+                  placeholder="Enter your name"
+                  required
+                  onChange={handleNameChange}
+                />
               </div>
               <div className="grid gap-2">
                 <Label className="text-sm" htmlFor="email">
@@ -302,6 +329,7 @@ export default function Homepage() {
                   placeholder="Enter your email"
                   required
                   type="email"
+                  onChange={handleEmailChange}
                 />
               </div>
               <div className="grid gap-2">
@@ -312,6 +340,7 @@ export default function Homepage() {
                   id="message"
                   placeholder="Enter your message"
                   required
+                  onChange={handleMsgChange}
                 />
               </div>
               <Button type="submit" onClick={handleSubmit}>
