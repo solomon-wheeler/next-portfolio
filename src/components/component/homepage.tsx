@@ -37,6 +37,7 @@ const modules = [
   { name: "Artificial intelligence", mark: 84 },
   { name: "Software processes and modelling", mark: 68 },
 ];
+
 export default function Homepage() {
   const initialDelay = 500;
   const delayConst = 1000;
@@ -53,6 +54,8 @@ export default function Homepage() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const [open, setOpen] = useState(false);
+
   const handleNameChange = (event: ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
   };
@@ -65,7 +68,8 @@ export default function Homepage() {
     setMessage(event.target.value);
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     const requestBody = JSON.stringify({ name, email, message });
     const response = await fetch("/api/sendEmail", {
       method: "POST",
