@@ -82,6 +82,7 @@ export default function Homepage() {
     if (response.ok) {
       console.log("Email sent successfully");
     } else {
+      console.log(response);
       console.log("Error sending email");
     }
   };
