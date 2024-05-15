@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { RoughNotation } from "react-rough-notation";
 import { useInView } from "react-intersection-observer";
-import { useState, ChangeEvent } from "react";
+import { useState, ChangeEvent, MouseEvent } from "react";
 
 const row1Items = [
   { name: "C", Icon: LayoutIcon },
@@ -68,7 +68,7 @@ export default function Homepage() {
     setMessage(event.target.value);
   };
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: any) => {
     event.preventDefault();
     const requestBody = JSON.stringify({ name, email, message });
     const response = await fetch("/api/sendEmail", {
@@ -88,7 +88,7 @@ export default function Homepage() {
 
   return (
     <>
-      <div className="bg-gray-50 dark:bg-gray-900 py-12 lg:py-24 xl:py-32 px-2">
+      <div className="bg-gray-50 dark:bg-gray-900 py-12 pt-16 lg:py-24 xl:py-32 px-2">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 md:gap-8 lg:gap-10">
             <div className="space-y-2">
