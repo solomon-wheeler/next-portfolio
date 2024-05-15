@@ -20,12 +20,12 @@ export async function POST(req: any) {
       subject: `Email from ${name}`,
       text: `From: ${email}\n Message: ${message}`,
     };
-    let info 
+    let info;
     try {
       info = await transporter.sendMail(mailOptions);
     } catch (error) {
       if (error instanceof Error) {
-        return new Response(`Error: ${error.message}, Info: ${info}, {
+        return new Response(`Error: ${error.message}, Info: ${info}`, {
           status: 500,
         });
       } else {
