@@ -12,21 +12,19 @@ import { useInView } from "react-intersection-observer";
 import { useState, ChangeEvent, MouseEvent } from "react";
 
 const row1Items = [
-  { name: "C", Icon: LayoutIcon },
-  { name: "Python", Icon: TypeIcon },
-  { name: "TypeScript/JavaScript", Icon: TypeIcon },
-  { name: "React", Icon: ComponentIcon },
+  { name: "Python", Icon: PythonIcon },
+  { name: "React", Icon: ReactIcon },
   { name: "SQL", Icon: CodeIcon },
   { name: "Git", Icon: GithubIcon },
+  { name: "C", Icon: CIcon },
 ];
 
 const row2Items = [
-  { name: "Tailwind CSS", Icon: WindIcon },
-  { name: "Nest js", Icon: TypeIcon },
-  { name: "Kubernetes", Icon: TypeIcon },
+  { name: "TypeScript/JavaScript", Icon: JavaSciptIcon },
+  { name: "NestJS", Icon: NestJSIcon },
+  { name: "Kubernetes", Icon: KubernetesIcon },
   { name: "Next.js", Icon: NavigationIcon },
   { name: "TypeScript", Icon: TypeIcon },
-  { name: "AWS", Icon: TypeIcon },
 ];
 
 const modules = [
@@ -96,7 +94,9 @@ export default function Homepage() {
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 👋 I’m Solomon Wheeler
               </h1>
-              <p className="text-gray-500 dark:text-gray-400">Developer.</p>
+              <h6 className="inline text-lg font-semibold">
+                Full Stack Developer
+              </h6>
             </div>
             <div className="space-y-4">
               <p className="text-gray-500 md:text-xl/relaxed dark:text-gray-400">
@@ -162,11 +162,11 @@ export default function Homepage() {
                 </div>
                 <div>
                   <h3 className="inline text-lg font-semibold">Email</h3>
-                  <p>📧solly.wheeler@gmail.com</p>
+                  <p>📧hello@solomon.wheeler.co.uk</p>
                 </div>
                 <div>
                   <h3 className="inline text-lg font-semibold">Website</h3>
-                  <p>🏡solomonwheeler.com</p>
+                  <p>🏡solomonwheeler.co.uk</p>
                 </div>
               </div>
             </div>
@@ -182,8 +182,10 @@ export default function Homepage() {
               </h2>
               <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 I have a depth of understanding in succesfully building,
-                testing, and deploying software applications. Here are some of
-                languages and tools I have experience with:
+                testing, and deploying software applications.
+              </p>
+              <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                Here are some of languages and tools I have experience with:
               </p>
             </div>
             <div className="grid gap-4 md:gap-6 lg:gap-8" ref={ref}>
@@ -276,27 +278,46 @@ export default function Homepage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
                 <Link className="font-medium underline" href="#">
-                  Project 1
+                  Sudoku Solver
                 </Link>
-                <p className="text-sm text-gray-500">Description </p>
+                <p className="text-sm text-gray-500">
+                  A Sudoku solving implementation which models the Sudoku as a
+                  constraint satisfaction problem, and uses a depth-first search
+                  with backtracking to explore the search space.{" "}
+                </p>
               </div>
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
                 <Link className="font-medium underline" href="#">
-                  Project 2
+                  Spam Filtering
                 </Link>
-                <p className="text-sm text-gray-500">Description</p>
+                <p className="text-sm text-gray-500">
+                  A spam filter which used naive bayes based on number of
+                  keywords, to predict wether an item was spam or not. It then
+                  used k-fold cross validation on our training/test dataset to
+                  workout a predicted accurary for the filter
+                </p>
               </div>
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
                 <Link className="font-medium underline" href="#">
-                  Project 3
+                  Graph & Minimum Spanning tree
                 </Link>
-                <p className="text-sm text-gray-500">Description</p>
+                <p className="text-sm text-gray-500">
+                  This program allows for the visualisation of directed and
+                  undirected graphs, which can be randomly created or made by
+                  the user. The program will then use Primm's algorithm to find
+                  the minimum spanning tree for this graph from a specified node
+                </p>
               </div>
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
                 <Link className="font-medium underline" href="#">
-                  Project 4
+                  Mental Health Hackathon Project{" "}
                 </Link>
-                <p className="text-sm text-gray-500">Description</p>
+                <p className="text-sm text-gray-500">
+                  It lets you write messages to others when you are feeling
+                  good, and get messages from others if you're having a rough
+                  day. Includes tracking of how you're feeling over time, so you
+                  can see your progress
+                </p>
               </div>
             </div>
           </div>
@@ -380,46 +401,21 @@ function LayoutIcon(props: any) {
   );
 }
 
-function ComponentIcon(props: any) {
+function ReactIcon(props: any) {
   return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+    <a
+      title="Facebook, Public domain, via Wikimedia Commons"
+      href="https://commons.wikimedia.org/wiki/File:React-icon.svg"
     >
-      <path d="M5.5 8.5 9 12l-3.5 3.5L2 12l3.5-3.5Z" />
-      <path d="m12 2 3.5 3.5L12 9 8.5 5.5 12 2Z" />
-      <path d="M18.5 8.5 22 12l-3.5 3.5L15 12l3.5-3.5Z" />
-      <path d="m12 15 3.5 3.5L12 22l-3.5-3.5L12 15Z" />
-    </svg>
-  );
-}
-
-function WindIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2" />
-      <path d="M9.6 4.6A2 2 0 1 1 11 8H2" />
-      <path d="M12.6 19.4A2 2 0 1 0 14 16H2" />
-    </svg>
+      <img
+        alt="React"
+        src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+        width="24"
+        height="24"
+        style={{ filter: "grayscale(50%)" }}
+        {...props}
+      />
+    </a>
   );
 }
 
@@ -444,26 +440,39 @@ function TypeIcon(props: any) {
   );
 }
 
-function FigmaIcon(props: any) {
+function PythonIcon(props: any) {
   return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+    <a
+      title="The people from the Tango! project., CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons"
+      href="https://commons.wikimedia.org/wiki/File:Python.svg"
     >
-      <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
-      <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" />
-      <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" />
-      <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z" />
-      <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" />
-    </svg>
+      <img
+        alt="Python"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/32px-Python.svg.png?20101018043057"
+        width="24"
+        height="24"
+        style={{ filter: "grayscale(50%)" }}
+        {...props}
+      />
+    </a>
+  );
+}
+
+function NestJSIcon(props: any) {
+  return (
+    <a
+      title="NestJS, Public domain, via Wikimedia Commons"
+      href="https://commons.wikimedia.org/wiki/File:NestJS.svg"
+    >
+      <img
+        alt="NestJS"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/NestJS.svg/512px-NestJS.svg.png?20221211225055"
+        width="24"
+        height="24"
+        style={{ filter: "grayscale(50%)" }}
+        {...props}
+      />
+    </a>
   );
 }
 
@@ -523,5 +532,58 @@ function CodeIcon(props: any) {
       <polyline points="16 18 22 12 16 6" />
       <polyline points="8 6 2 12 8 18" />
     </svg>
+  );
+}
+
+function CIcon(props: any) {
+  return (
+    <a
+      title="ElodinKaldwin, Public domain, via Wikimedia Commons"
+      href="https://commons.wikimedia.org/wiki/File:C_Programming_Language.svg"
+    >
+      <img
+        alt="CIcon"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/256px-C_Programming_Language.svg.png?20201031132917"
+        width="24"
+        height="24"
+        style={{ filter: "grayscale(50%)" }}
+        {...props}
+      />
+    </a>
+  );
+}
+
+function KubernetesIcon(props: any) {
+  return (
+    <a
+      title="Google, Public domain, via Wikimedia Commons"
+      href="https://commons.wikimedia.org/wiki/File:Kubernetes_logo_without_workmark.svg"
+    >
+      <img
+        alt="KubernetesIcon"
+        src="https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg"
+        width="24"
+        height="24"
+        style={{ filter: "grayscale(50%)" }}
+        {...props}
+      />
+    </a>
+  );
+}
+function JavaSciptIcon(props: any) {
+  return (
+    <a
+      title="Christopher Williams, Public domain, via Wikimedia Commons"
+      href="https://commons.wikimedia.org/wiki/File:JavaScript-logo.png"
+    >
+      <img
+        alt="JavaScrptIcon"
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+        width="24"
+        height="24"
+        style={{ filter: "grayscale(50%)" }}
+        {...props}
+      />
+    </a>
   );
 }
