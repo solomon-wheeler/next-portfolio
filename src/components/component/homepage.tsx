@@ -304,8 +304,9 @@ export default function Homepage() {
                 <p className="text-sm text-gray-500">
                   This program allows for the visualisation of directed and
                   undirected graphs, which can be randomly created or made by
-                  the user. The program will then use Primm's algorithm to find
-                  the minimum spanning tree for this graph from a specified node
+                  the user. The program will then use Primm&apos;s algorithm to
+                  find the minimum spanning tree for this graph from a specified
+                  node
                 </p>
               </div>
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
@@ -314,9 +315,9 @@ export default function Homepage() {
                 </Link>
                 <p className="text-sm text-gray-500">
                   It lets you write messages to others when you are feeling
-                  good, and get messages from others if you're having a rough
-                  day. Includes tracking of how you're feeling over time, so you
-                  can see your progress
+                  good, and get messages from others if you&apos;re having a
+                  rough day. Includes tracking of how you&apos;re feeling over
+                  time, so you can see your progress
                 </p>
               </div>
             </div>
