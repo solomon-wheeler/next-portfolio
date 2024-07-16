@@ -162,7 +162,7 @@ export default function Homepage() {
                 </div>
                 <div>
                   <h3 className="inline text-lg font-semibold">Email</h3>
-                  <p>📧hello@solomon.wheeler.co.uk</p>
+                  <p>📧hello@solomonwheeler.co.uk</p>
                 </div>
                 <div>
                   <h3 className="inline text-lg font-semibold">Website</h3>
@@ -199,7 +199,7 @@ export default function Homepage() {
                       type="highlight"
                       color="#007BFF"
                       show={inView}
-                      animationDelay={delayTiming(1)}
+                      animationDelay={delayTiming(9)}
                     >
                       <item.Icon className="w-5 h-5" />
                     </RoughNotation>
@@ -217,7 +217,7 @@ export default function Homepage() {
                       type="highlight"
                       color="#007BFF"
                       show={inView}
-                      animationDelay={delayTiming(1)}
+                      animationDelay={delayTiming(10)}
                     >
                       <item.Icon className="w-5 h-5" />
                     </RoughNotation>
