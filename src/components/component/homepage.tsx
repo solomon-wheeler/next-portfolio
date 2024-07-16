@@ -199,7 +199,7 @@ export default function Homepage() {
                       type="highlight"
                       color="#007BFF"
                       show={inView}
-                      animationDelay={delayTiming(9)}
+                      animationDelay={delayTiming(4)}
                     >
                       <item.Icon className="w-5 h-5" />
                     </RoughNotation>
@@ -217,7 +217,7 @@ export default function Homepage() {
                       type="highlight"
                       color="#007BFF"
                       show={inView}
-                      animationDelay={delayTiming(10)}
+                      animationDelay={delayTiming(5)}
                     >
                       <item.Icon className="w-5 h-5" />
                     </RoughNotation>
