@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { RoughNotation } from "react-rough-notation";
 import { useInView } from "react-intersection-observer";
-import { useState, ChangeEvent, MouseEvent } from "react";
+import { useState, ChangeEvent, useEffect } from "react";
 import { row1Items } from "../Icons/proggramingLanguage.icon";
 import { row2Items } from "../Icons/proggramingLanguage.icon";
 import { PopupDialog } from "../ui/popupDialog.component";
@@ -32,7 +32,15 @@ export default function Homepage() {
     triggerOnce: false, // Change this to false if you want the animation to trigger again whenever it comes in view
   });
 
+  useEffect(() => {
+    fetch("/api/Spotify")
+      .then((response) => response.json())
+      .then((data) => setSong(data.song));
+  }, []);
+
   const [name, setName] = useState("");
+  const [song, setSong] = useState("");
+
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -158,6 +166,9 @@ export default function Homepage() {
                 <div>
                   <h3 className="inline text-lg font-semibold">Website</h3>
                   <p>🏡solomonwheeler.co.uk</p>
+                </div>
+                <div>
+                  <h1>Currently playing: {song}</h1>
                 </div>
               </div>
             </div>
