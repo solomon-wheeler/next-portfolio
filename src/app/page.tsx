@@ -1,5 +1,5 @@
 "use client";
-import Homepage from "@/components/component/homepage"; // Import the 'Homepage' component correctly
+import Homepage from "@/components/component/homepage.component"; // Import the 'Homepage' component correctly
 import { ThemeProvider, useTheme } from "next-themes";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 
