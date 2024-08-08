@@ -6,7 +6,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
+} from "./dialog";
 
 type DialogDemoProps = {
   dialogOpen: boolean;
