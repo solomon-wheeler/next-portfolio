@@ -27,7 +27,7 @@ export default function Homepage() {
   };
 
   const [ref, inView] = useInView({
-    triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
+    triggerOnce: false, // Change this to false if you want the animation to trigger again whenever it comes in view
   });
 
   const [name, setName] = useState("");
@@ -362,4 +362,3 @@ export default function Homepage() {
     </>
   );
 }
-
