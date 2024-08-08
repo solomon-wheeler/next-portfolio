@@ -10,7 +10,13 @@ export async function GET(req: any) {
     process.env;
 
   if (!SPOTIFY_CLIENT_ID || !SPOTIFY_CLIENT_SECRET) {
-    return res.status(400).json({ error: "Missing Spotify API credentials" });
+    return new Response(
+      JSON.stringify({ error: "Missing Spotify API credentials" }),
+      {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+      }
+    );
   }
 
   try {
