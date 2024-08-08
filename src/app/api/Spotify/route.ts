@@ -55,9 +55,13 @@ export async function GET(req: any) {
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    return new Response(JSON.stringify({ error: error }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" },
-    });
+    console.log(error);
+    return new Response(
+      JSON.stringify({ error: "There was an error calling the spotify api" }),
+      {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+      }
+    );
   }
 }
