@@ -5,7 +5,7 @@ const qs = require("qs");
 
 dotenv.config();
 
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
+export async function GET(req: any) {
   const { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, SPOTIFTY_REFRESH_TOKEN } =
     process.env;
 
