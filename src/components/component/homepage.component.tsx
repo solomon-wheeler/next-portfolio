@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
+
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { RoughNotation } from "react-rough-notation";
@@ -9,6 +9,8 @@ import { useInView } from "react-intersection-observer";
 import { useState, ChangeEvent, MouseEvent } from "react";
 import { row1Items } from "../Icons/proggramingLanguage.icon";
 import { row2Items } from "../Icons/proggramingLanguage.icon";
+import { PopupDialog } from "../ui/popupDialog.component";
+
 const modules = [
   { name: "Computer systems architecture 1 & 2", mark: 81 },
   { name: "Discrete mathematics and database", mark: 95 },
@@ -33,6 +35,9 @@ export default function Homepage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [dialogDescription, setDialogDescription] = useState("");
+  const [dialogTitle, setDialogTitle] = useState("");
 
   const [open, setOpen] = useState(false);
 
@@ -60,11 +65,15 @@ export default function Homepage() {
     });
 
     if (response.ok) {
-      console.log("Email sent successfully");
+      setDialogTitle("Success🎉");
+      setDialogDescription("Email sent successfully");
     } else {
+      console.log(response.status);
       console.log(response);
-      console.log("Error sending email");
+      setDialogTitle("Uh ohh...❌");
+      setDialogDescription("Error sending email");
     }
+    setDialogOpen(true);
   };
 
   return (
@@ -219,7 +228,7 @@ export default function Homepage() {
                 Qualifications
               </h2>
               <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                I am currently studying a degree in computer science at the
+                I am currently studying a degree in Computer Science at the
                 University of Bath. Here are some of the modules I have studied:
               </p>
             </div>
@@ -359,6 +368,12 @@ export default function Homepage() {
           </div>
         </div>
       </section>
+      <PopupDialog
+        dialogOpen={dialogOpen}
+        setDialogOpen={setDialogOpen}
+        dialogDescription={dialogDescription}
+        dialogTitle={dialogTitle}
+      />
     </>
   );
 }
