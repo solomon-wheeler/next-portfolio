@@ -4,7 +4,7 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "./dialog";
+} from "../ui/dialog";
 
 type DialogDemoProps = {
   dialogOpen: boolean;

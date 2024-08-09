@@ -9,7 +9,8 @@ import { useInView } from "react-intersection-observer";
 import { useState, ChangeEvent, useEffect } from "react";
 import { row1Items } from "../Icons/proggramingLanguage.icon";
 import { row2Items } from "../Icons/proggramingLanguage.icon";
-import { PopupDialog } from "../ui/popupDialog.component";
+import { PopupDialog } from "./popupDialog.component";
+import { SpotifyPlaying } from "./spotifyPlaying.component";
 
 const modules = [
   { name: "Computer systems architecture 1 & 2", mark: 81 },
@@ -32,22 +33,14 @@ export default function Homepage() {
     triggerOnce: false, // Change this to false if you want the animation to trigger again whenever it comes in view
   });
 
-  useEffect(() => {
-    fetch("/api/Spotify")
-      .then((response) => response.json())
-      .then((data) => setSong(data.song));
-  }, []);
-
   const [name, setName] = useState("");
-  const [song, setSong] = useState("");
 
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [dialogOpen, setDialogOpen] = useState(false);
   const [dialogDescription, setDialogDescription] = useState("");
   const [dialogTitle, setDialogTitle] = useState("");
-
-  const [open, setOpen] = useState(false);
+  const [isEmailLoading, setIsEmailLoading] = useState(false);
 
   const handleNameChange = (event: ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
@@ -63,6 +56,8 @@ export default function Homepage() {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
+    setIsEmailLoading(true);
+
     const requestBody = JSON.stringify({ name, email, message });
     const response = await fetch("/api/sendEmail", {
       method: "POST",
@@ -82,6 +77,7 @@ export default function Homepage() {
       setDialogDescription("Error sending email");
     }
     setDialogOpen(true);
+    setIsEmailLoading(false);
   };
 
   return (
@@ -167,9 +163,7 @@ export default function Homepage() {
                   <h3 className="inline text-lg font-semibold">Website</h3>
                   <p>🏡solomonwheeler.co.uk</p>
                 </div>
-                <div>
-                  <h1>Currently playing: {song}</h1>
-                </div>
+                <SpotifyPlaying />
               </div>
             </div>
           </div>
@@ -372,7 +366,13 @@ export default function Homepage() {
                   onChange={handleMsgChange}
                 />
               </div>
-              <Button type="submit" onClick={handleSubmit}>
+              <Button
+                type="submit"
+                onClick={handleSubmit}
+                className={`bg-blue-500 text-white px-4 py-2 ${
+                  isEmailLoading ? "animate-pulse" : ""
+                }`}
+              >
                 Submit
               </Button>
             </form>
