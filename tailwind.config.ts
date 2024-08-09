@@ -19,6 +19,9 @@ const config: Config = {
       translate: {
         "-1/2": "-50%",
       },
+      colors: {
+        lightblue: "#ADD8E6",
+      },
     },
   },
   darkMode: "class",

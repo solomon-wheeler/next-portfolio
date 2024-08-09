@@ -10,7 +10,7 @@ import { useState, ChangeEvent, useEffect } from "react";
 import { row1Items } from "../Icons/proggramingLanguage.icon";
 import { row2Items } from "../Icons/proggramingLanguage.icon";
 import { PopupDialog } from "./popupDialog.component";
-import { SpotifyPlaying } from "./spotifyPlaying.component";
+import { SpotifyPlaying } from "./SpotifyPlaying/spotifyPlaying.component";
 
 const modules = [
   { name: "Computer systems architecture 1 & 2", mark: 81 },
