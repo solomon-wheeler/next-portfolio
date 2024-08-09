@@ -5,7 +5,7 @@ import {
   HomeIcon,
   MoonIcon,
   LinkedinIcon,
-  GitlabIcon,
+  GitIcon,
   SunIcon,
 } from "@/components/Icons/nav.icon";
 import { useTheme } from "next-themes";
@@ -53,7 +53,7 @@ export default function Header() {
             className="text-muted-foreground hover:text-foreground"
             prefetch={false}
           >
-            <GitlabIcon className="h-6 w-6" />
+            <GitIcon className="h-6 w-6" />
             <span className="sr-only">GitHub</span>
           </Link>
         </div>

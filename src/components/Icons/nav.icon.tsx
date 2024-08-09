@@ -1,6 +1,9 @@
 "use client";
+import { useTheme } from "next-themes";
 
-export function GitlabIcon(props: any) {
+export function GitIcon(props: any) {
+  const { theme } = useTheme();
+  const iconColor = theme === "dark" ? "#ffffff" : "currentColor";
   return (
     <svg
       {...props}
@@ -9,17 +12,19 @@ export function GitlabIcon(props: any) {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke={iconColor}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="m22 13.29-3.33-10a.42.42 0 0 0-.14-.18.38.38 0 0 0-.22-.11.39.39 0 0 0-.23.07.42.42 0 0 0-.14.18l-2.26 6.67H8.32L6.1 3.26a.42.42 0 0 0-.1-.18.38.38 0 0 0-.26-.08.39.39 0 0 0-.23.07.42.42 0 0 0-.14.18L2 13.29a.74.74 0 0 0 .27.83L12 21l9.69-6.88a.71.71 0 0 0 .31-.83Z" />
+      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577v-2.165c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.24 1.84 1.24 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.76-1.605-2.665-.305-5.466-1.335-5.466-5.93 0-1.31.467-2.38 1.235-3.22-.125-.305-.535-1.54.115-3.205 0 0 1.005-.322 3.3 1.23.955-.265 1.98-.398 3-.403 1.02.005 2.045.138 3 .403 2.28-1.552 3.285-1.23 3.285-1.23.655 1.665.245 2.9.12 3.205.77.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.43.37.81 1.1.81 2.22v3.285c0 .32.215.695.825.577C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" />
     </svg>
   );
 }
 
 export function LinkedinIcon(props: any) {
+  const { theme } = useTheme();
+  const iconColor = theme === "dark" ? "#ffffff" : "currentColor";
   return (
     <svg
       {...props}
@@ -28,7 +33,7 @@ export function LinkedinIcon(props: any) {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke={iconColor}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -41,6 +46,8 @@ export function LinkedinIcon(props: any) {
 }
 
 export function MoonIcon(props: any) {
+  const { theme } = useTheme();
+  const iconColor = theme === "dark" ? "#ffffff" : "currentColor";
   return (
     <svg
       {...props}
@@ -49,7 +56,7 @@ export function MoonIcon(props: any) {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke={iconColor}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -59,6 +66,8 @@ export function MoonIcon(props: any) {
   );
 }
 export function SunIcon(props: any) {
+  const { theme } = useTheme();
+  const iconColor = theme === "dark" ? "#ffffff" : "currentColor";
   return (
     <svg
       {...props}
@@ -67,7 +76,7 @@ export function SunIcon(props: any) {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke={iconColor}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -86,6 +95,9 @@ export function SunIcon(props: any) {
 }
 
 export function HomeIcon(props: any) {
+  const { theme } = useTheme();
+  const iconColor = theme === "dark" ? "#ffffff" : "currentColor";
+
   return (
     <svg
       {...props}
@@ -94,7 +106,7 @@ export function HomeIcon(props: any) {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke={iconColor}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
