@@ -1,9 +1,13 @@
 "use client";
 import { useTheme } from "next-themes";
 
+const getIconColour = (theme: string | undefined): string => {
+  return theme === "dark" ? "#ffffff" : "#000000";
+};
+
 export function GitIcon(props: any) {
   const { theme } = useTheme();
-  const iconColor = theme === "dark" ? "#ffffff" : "currentColor";
+  const iconColor = getIconColour(theme);
   return (
     <svg
       {...props}
@@ -24,7 +28,7 @@ export function GitIcon(props: any) {
 
 export function LinkedinIcon(props: any) {
   const { theme } = useTheme();
-  const iconColor = theme === "dark" ? "#ffffff" : "currentColor";
+  const iconColor = getIconColour(theme);
   return (
     <svg
       {...props}
@@ -47,7 +51,7 @@ export function LinkedinIcon(props: any) {
 
 export function MoonIcon(props: any) {
   const { theme } = useTheme();
-  const iconColor = theme === "dark" ? "#ffffff" : "currentColor";
+  const iconColor = getIconColour(theme);
   return (
     <svg
       {...props}
@@ -67,7 +71,7 @@ export function MoonIcon(props: any) {
 }
 export function SunIcon(props: any) {
   const { theme } = useTheme();
-  const iconColor = theme === "dark" ? "#ffffff" : "currentColor";
+  const iconColor = getIconColour(theme);
   return (
     <svg
       {...props}
@@ -96,7 +100,7 @@ export function SunIcon(props: any) {
 
 export function HomeIcon(props: any) {
   const { theme } = useTheme();
-  const iconColor = theme === "dark" ? "#ffffff" : "currentColor";
+  const iconColor = getIconColour(theme);
 
   return (
     <svg

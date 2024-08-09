@@ -27,7 +27,7 @@ export const SpotifyPlaying = () => {
       <div className="container px-4 md:px-6">
         <div className="grid gap-8 md:gap-10">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl dark:text-white">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black dark:text-white">
               {isLoading ? "Loading..." : "🎧Currently playing"}
             </h2>
 
@@ -50,7 +50,7 @@ export const SpotifyPlaying = () => {
                         className={`w-2 bg-lightblue rounded`}
                         style={{
                           animation: `equalizer ${
-                            ((i % 5) + 1) * 300
+                            ((i % 5) + 1) * 350
                           }ms infinite`,
                           height: "1rem",
                         }}

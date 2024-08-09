@@ -88,10 +88,10 @@ export default function Homepage() {
         <div className="container px-4 md:px-6 pt-12">
           <div className="grid gap-6 md:gap-8 lg:gap-10">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl dark:text-white">
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black dark:text-white">
                 👋 I’m Solomon Wheeler
               </h1>
-              <h6 className="inline text-lg font-semibold dark:text-white">
+              <h6 className="inline text-lg font-semibold text-black dark:text-white">
                 Full Stack Developer
               </h6>
             </div>
@@ -150,30 +150,36 @@ export default function Homepage() {
               </p>
               <div className="grid gap-2 md:grid-cols-2">
                 <div>
-                  <h3 className="inline text-lg font-semibold dark:text-white">
+                  <h3 className="inline text-lg font-semibold text-black dark:text-white">
                     Name
                   </h3>
-                  <p className="dark:text-white">🧑‍💻Solomon Wheeler</p>
+                  <p className="text-black dark:text-white">
+                    🧑‍💻Solomon Wheeler
+                  </p>
                 </div>
                 <div>
-                  <h3 className="inline text-lg font-semibold dark:text-white">
+                  <h3 className="inline text-lg font-semibold text-black dark:text-white">
                     Location
                   </h3>
-                  <p className="dark:text-white">📌London/Bath, UK</p>
+                  <p className="text-black dark:text-white">
+                    📌London/Bath, UK
+                  </p>
                 </div>
                 <div>
-                  <h3 className="inline text-lg font-semibold dark:text-white">
+                  <h3 className="inline text-lg font-semibold text-black dark:text-white">
                     Email
                   </h3>
-                  <p className="dark:text-white">
+                  <p className="text-black dark:text-white">
                     📧hello@solomonwheeler.co.uk
                   </p>
                 </div>
                 <div>
-                  <h3 className="inline text-lg font-semibold dark:text-white">
+                  <h3 className="inline text-lg font-semibold text-black dark:text-white">
                     Website
                   </h3>
-                  <p className="dark:text-white">🏡solomonwheeler.co.uk</p>
+                  <p className="text-black dark:text-white">
+                    🏡solomonwheeler.co.uk
+                  </p>
                 </div>
               </div>
             </div>
@@ -184,14 +190,14 @@ export default function Homepage() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 md:gap-10">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold dark:text-white tracking-tighter sm:text-4xl md:text-5xl">
+              <h2 className="text-3xl font-bold text-black dark:text-white tracking-tighter sm:text-4xl md:text-5xl">
                 My Skills
               </h2>
-              <p className="text-gray-500 dark:text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              <p className="text-gray-500 text-black dark:text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 I have a depth of understanding in succesfully building,
                 testing, and deploying software applications.
               </p>
-              <p className="text-gray-500  dark:text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              <p className="text-gray-500  text-black dark:text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 Here are some of languages and tools I have experience with:
               </p>
             </div>
@@ -210,7 +216,7 @@ export default function Homepage() {
                     >
                       <item.Icon className="w-5 h-5" />
                     </RoughNotation>
-                    <span className="font-medium dark:text-white">
+                    <span className="font-medium text-black dark:text-white">
                       {item.name}
                     </span>
                   </div>
@@ -230,7 +236,7 @@ export default function Homepage() {
                     >
                       <item.Icon className="w-5 h-5" />
                     </RoughNotation>
-                    <span className="font-medium dark:text-white">
+                    <span className="font-medium text-black dark:text-white">
                       {item.name}
                     </span>
                   </div>
@@ -244,7 +250,7 @@ export default function Homepage() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 md:gap-10">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold dark:text-white tracking-tighter sm:text-4xl md:text-5xl">
+              <h2 className="text-3xl font-bold text-black dark:text-white tracking-tighter sm:text-4xl md:text-5xl">
                 Qualifications
               </h2>
               <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
@@ -254,17 +260,21 @@ export default function Homepage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
-                <h2 className="text-2xl font-bold dark:text-white">Modules</h2>
+                <h2 className="text-2xl font-bold text-black dark:text-white">
+                  Modules
+                </h2>
                 {modules.map((module, index) => (
-                  <li className="dark:text-white" key={index}>
+                  <li className="text-black dark:text-white" key={index}>
                     {module.name}
                   </li>
                 ))}
               </div>
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
-                <h2 className="text-2xl font-bold dark:text-white">Marks</h2>
+                <h2 className="text-2xl font-bold text-black dark:text-white">
+                  Marks
+                </h2>
                 {modules.map((module, index) => (
-                  <li className="dark:text-white" key={index}>
+                  <li className="text-black dark:text-white" key={index}>
                     {module.mark}%
                   </li>
                 ))}
@@ -285,35 +295,35 @@ export default function Homepage() {
         <div className="container px-4 md:px-6">
           <div className="space-y-4">
             <div className="space-y-2">
-              <h2 className="text-3xl dark:text-white font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              <h2 className="text-3xl text-black dark:text-white font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 My Projects
               </h2>
-              <p className="text-gray-500 dark:text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              <p className="text-gray-500 text-black dark:text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 Here are some of the projects I’ve been working on.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
                 <Link
-                  className="font-medium underline dark:text-white"
+                  className="font-medium underline text-black dark:text-white"
                   href="#"
                 >
                   Sudoku Solver
                 </Link>
-                <p className="text-sm text-gray-500 dark:text-white">
+                <p className="text-sm text-gray-500 text-black dark:text-white">
                   A Sudoku solving implementation which models the Sudoku as a
                   constraint satisfaction problem, and uses a depth-first search
                   with backtracking to explore the search space.{" "}
                 </p>
               </div>
-              <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800 dark:text-white">
+              <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800 text-black dark:text-white">
                 <Link
-                  className="font-medium underline dark:text-white"
+                  className="font-medium underline text-black dark:text-white"
                   href="#"
                 >
                   Spam Filtering
                 </Link>
-                <p className="text-sm text-gray-500 dark:text-white">
+                <p className="text-sm text-gray-500 text-black dark:text-white">
                   A spam filter which used naive bayes based on number of
                   keywords, to predict wether an item was spam or not. It then
                   used k-fold cross validation on our training/test dataset to
@@ -322,12 +332,12 @@ export default function Homepage() {
               </div>
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
                 <Link
-                  className="font-medium underline dark:text-white"
+                  className="font-medium underline text-black dark:text-white"
                   href="#"
                 >
                   Graph & Minimum Spanning tree
                 </Link>
-                <p className="text-sm text-gray-500 dark:text-white">
+                <p className="text-sm text-gray-500 text-black dark:text-white">
                   This program allows for the visualisation of directed and
                   undirected graphs, which can be randomly created or made by
                   the user. The program will then use Primm&apos;s algorithm to
@@ -337,12 +347,12 @@ export default function Homepage() {
               </div>
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
                 <Link
-                  className="font-medium underline dark:text-white"
+                  className="font-medium underline text-black dark:text-white"
                   href="#"
                 >
                   Mental Health Hackathon Project{" "}
                 </Link>
-                <p className="text-sm text-gray-500 dark:text-white">
+                <p className="text-sm text-gray-500 text-black dark:text-white">
                   It lets you write messages to others when you are feeling
                   good, and get messages from others if you&apos;re having a
                   rough day. Includes tracking of how you&apos;re feeling over
@@ -357,16 +367,19 @@ export default function Homepage() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-4 md:gap-6">
             <div className="space-y-2">
-              <h2 className="text-3xl dark:text-white font-bold tracking-tighter sm:text-4xl md:text-5xl dark:text-white">
+              <h2 className="text-3xl text-black dark:text-white font-bold tracking-tighter sm:text-4xl md:text-5xl text-black dark:text-white">
                 Contact Me
               </h2>
-              <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 dark:text-white">
+              <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 text-black dark:text-white">
                 {"Get in touch 😀"}
               </p>
             </div>
             <form className="grid gap-4 md:gap-6">
               <div className="grid gap-2">
-                <Label className="text-sm dark:text-white" htmlFor="name">
+                <Label
+                  className="text-sm text-black dark:text-white"
+                  htmlFor="name"
+                >
                   Name
                 </Label>
                 <Input
@@ -377,7 +390,10 @@ export default function Homepage() {
                 />
               </div>
               <div className="grid gap-2">
-                <Label className="text-sm dark:text-white" htmlFor="email">
+                <Label
+                  className="text-sm text-black dark:text-white"
+                  htmlFor="email"
+                >
                   Email
                 </Label>
                 <Input
@@ -389,7 +405,10 @@ export default function Homepage() {
                 />
               </div>
               <div className="grid gap-2">
-                <Label className="text-sm dark:text-white" htmlFor="message">
+                <Label
+                  className="text-sm text-black dark:text-white"
+                  htmlFor="message"
+                >
                   Message
                 </Label>
                 <Textarea
