@@ -11,6 +11,7 @@ import { row1Items } from "../Icons/proggramingLanguage.icon";
 import { row2Items } from "../Icons/proggramingLanguage.icon";
 import { PopupDialog } from "./popupDialog.component";
 import { SpotifyPlaying } from "./SpotifyPlaying/spotifyPlaying.component";
+import Header from "./Header/header.component";
 
 const modules = [
   { name: "Computer systems architecture 1 & 2", mark: 81 },
@@ -82,8 +83,9 @@ export default function Homepage() {
 
   return (
     <>
+      <Header />
       <div className="bg-gray-50 dark:bg-gray-900 py-12 pt-16 lg:py-24 xl:py-32 px-2">
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 md:px-6 pt-12">
           <div className="grid gap-6 md:gap-8 lg:gap-10">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
