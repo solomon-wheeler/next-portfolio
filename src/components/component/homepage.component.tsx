@@ -163,7 +163,6 @@ export default function Homepage() {
                   <h3 className="inline text-lg font-semibold">Website</h3>
                   <p>🏡solomonwheeler.co.uk</p>
                 </div>
-                <SpotifyPlaying />
               </div>
             </div>
           </div>
@@ -257,6 +256,8 @@ export default function Homepage() {
           </div>
         </div>
       </section>
+      <SpotifyPlaying />
+
       <section
         className="bg-gray-50 dark:bg-gray-900 py-12 md:py-24 lg:py-32 xl:py-48"
         key="section4"
