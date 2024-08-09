@@ -50,7 +50,7 @@ export const SpotifyPlaying = () => {
                         className={`w-2 bg-lightblue rounded`}
                         style={{
                           animation: `equalizer ${
-                            ((i % 5) + 1) * 300
+                            ((i % 5) + 1) * 350
                           }ms infinite`,
                           height: "1rem",
                         }}
