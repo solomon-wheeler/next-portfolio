@@ -34,14 +34,14 @@ export const SpotifyPlaying = () => {
           </h2>
           <div className="flex items-center">
             {!isLoading && albumCover && (
-              <div className="relative w-24 h-24 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40 mr-4 spin-slow">
+              <div className="relative w-24 h-24  sm:w-10 sm:h-10 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40 mr-4 spin-slow">
                 <img
                   src={albumCover}
                   alt="Album Cover"
-                  className="w-full h-full object-cover rounded-full"
+                  className="w-full h-full object-cover rounded-full album-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-2 h-2 md:w-3 md:h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 bg-white dark:bg-black rounded-full"></div>
+                  <div className="w-2 h-2 sm:w-1 sm:h-1 md:w-3 md:h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 bg-white dark:bg-black rounded-full"></div>
                 </div>
               </div>
             )}
@@ -51,19 +51,19 @@ export const SpotifyPlaying = () => {
               </p>
               {!isLoading && (
                 <div
-                  className="flex space-x-4 mt-1"
+                  className="flex space-x-1 sm:space-x-2 md:space-x-4 mt-1"
                   style={{ transform: "scaleY(-1)" }}
                 >
                   {Array(15)
                     .fill(null)
                     .map((_, i) => (
                       <div
-                        className="h-16 md:h-20  lg:h-24  xl:h-28 relative w-2 mx-2 l:mx-3 xl:mx-3"
+                        className="h-8 sm:h-12 md:h-20 lg:h-24 xl:h-28 relative w-1 sm:w-1.5 md:w-2 mx-0.5 sm:mx-1 md:mx-2 lg:mx-3 xl:mx-3"
                         key={i}
                       >
                         <div
                           key={i}
-                          className={`w-1.5 lg:w-2 xl:w-2.5 h-1 bg-lightblue rounded`}
+                          className={`w-0.5 sm:w-1 md:w-1.5 lg:w-2 xl:w-2.5 h-1 bg-lightblue rounded`}
                           style={{
                             animation: `equalizer ${
                               ((i % 5) + 1) * 350

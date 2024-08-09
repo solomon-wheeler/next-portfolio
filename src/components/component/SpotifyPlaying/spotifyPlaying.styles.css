@@ -28,3 +28,7 @@
 .spin-slow {
   animation: spin 10s linear infinite;
 }
+
+.album-cover {
+  aspect-ratio: 1 / 1;
+}
