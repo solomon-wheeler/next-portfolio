@@ -39,6 +39,33 @@ export async function GET(req: any) {
     });
 
     const accessToken = response.data.access_token;
+    const currentlyPlayingResponse = await axios({
+      url: "https://api.spotify.com/v1/me/player/currently-playing",
+      method: "get",
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
+
+    if (
+      currentlyPlayingResponse.status === 200 &&
+      currentlyPlayingResponse.data?.item
+    ) {
+      const currentlyPlayingSong = currentlyPlayingResponse.data.item;
+      const currentlyPlayingSongName = currentlyPlayingSong.name;
+      const currentlyPlayingSongArtist = currentlyPlayingSong.artists[0].name;
+
+      return new Response(
+        JSON.stringify({
+          song: currentlyPlayingSongName,
+          artist: currentlyPlayingSongArtist,
+        }),
+        {
+          status: 200,
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+    }
 
     const recentlyPlayedResponse = await axios({
       url: "https://api.spotify.com/v1/me/player/recently-played?limit=1",
