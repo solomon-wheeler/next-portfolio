@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 import dotenv from "dotenv";
-const qs = require("qs");
+import qs from "qs";
 
 dotenv.config();
 
@@ -29,7 +29,7 @@ export async function GET(req: any) {
       }),
       headers: {
         Accept: "application/json",
-        "Content-Type": "application/x-www-form-urlencoded", // Corrected here
+        "Content-Type": "application/x-www-form-urlencoded",
         Authorization:
           "Basic " +
           Buffer.from(SPOTIFY_CLIENT_ID + ":" + SPOTIFY_CLIENT_SECRET).toString(
