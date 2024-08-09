@@ -1,4 +1,3 @@
-import { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 import dotenv from "dotenv";
 import qs from "qs";
