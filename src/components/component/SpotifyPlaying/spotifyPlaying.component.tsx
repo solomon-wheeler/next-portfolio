@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import "./spotifyPlaying.styles.css";
 export const SpotifyPlaying = () => {
   const [song, setSong] = useState("Getting data from spotify...");
   const [artist, setArtist] = useState("");
@@ -28,25 +28,37 @@ export const SpotifyPlaying = () => {
         <div className="grid gap-8 md:gap-10">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              {isLoading ? "Loading..." : "Currently playing"}
+              {isLoading ? "Loading..." : "🎧Currently playing"}
             </h2>
 
-            <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            <p className="text-gray-500 pt-10 pb-2 text-2xl md:text-3xl lg:text-2xl xl:text-3xl dark:text-gray-400">
+              {" "}
               {song}
               {" -"} {artist}
             </p>
-            <div className="flex space-x-4">
-              {Array(30)
-                .fill(null)
-                .map((_, i) => (
-                  <div
-                    key={i}
-                    className={`h-6 w-1 bg-lightblue rounded animate-pulse duration-${
-                      ((i % 5) + 1) * 200
-                    }`}
-                  ></div>
-                ))}
-            </div>
+            {!isLoading && (
+              <div
+                className="flex space-x-4 "
+                style={{ transform: "scaleY(-1)" }}
+              >
+                {Array(20)
+                  .fill(null)
+                  .map((_, i) => (
+                    <div className="h-16 relative w-4 mx-2" key={i}>
+                      <div
+                        key={i}
+                        className={`w-2 bg-lightblue rounded`}
+                        style={{
+                          animation: `equalizer ${
+                            ((i % 5) + 1) * 300
+                          }ms infinite`,
+                          height: "1rem",
+                        }}
+                      ></div>
+                    </div>
+                  ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
