@@ -46,8 +46,7 @@ export default function Homepage() {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [dialogDescription, setDialogDescription] = useState("");
   const [dialogTitle, setDialogTitle] = useState("");
-
-  const [open, setOpen] = useState(false);
+  const [isEmailLoading, setIsEmailLoading] = useState(false);
 
   const handleNameChange = (event: ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
@@ -63,6 +62,8 @@ export default function Homepage() {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
+    setIsEmailLoading(true);
+
     const requestBody = JSON.stringify({ name, email, message });
     const response = await fetch("/api/sendEmail", {
       method: "POST",
@@ -82,6 +83,7 @@ export default function Homepage() {
       setDialogDescription("Error sending email");
     }
     setDialogOpen(true);
+    setIsEmailLoading(false);
   };
 
   return (
@@ -372,7 +374,13 @@ export default function Homepage() {
                   onChange={handleMsgChange}
                 />
               </div>
-              <Button type="submit" onClick={handleSubmit}>
+              <Button
+                type="submit"
+                onClick={handleSubmit}
+                className={`bg-blue-500 text-white px-4 py-2 ${
+                  isEmailLoading ? "animate-pulse" : ""
+                }`}
+              >
                 Submit
               </Button>
             </form>
