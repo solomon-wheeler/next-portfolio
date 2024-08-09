@@ -54,11 +54,14 @@ export async function GET(req: any) {
       const currentlyPlayingSong = currentlyPlayingResponse.data.item;
       const currentlyPlayingSongName = currentlyPlayingSong.name;
       const currentlyPlayingSongArtist = currentlyPlayingSong.artists[0].name;
+      const currentlyPlayingSongAlbumCover =
+        currentlyPlayingSong.album.images[0].url;
 
       return new Response(
         JSON.stringify({
           song: currentlyPlayingSongName,
           artist: currentlyPlayingSongArtist,
+          albumCover: currentlyPlayingSongAlbumCover,
         }),
         {
           status: 200,
@@ -78,10 +81,13 @@ export async function GET(req: any) {
     const recentlyPlayedSong = recentlyPlayedResponse.data.items[0].track;
     const recenntlyPlayedSongName = recentlyPlayedSong.name;
     const recentlyPlayedSongArtist = recentlyPlayedSong.artists[0].name;
+    const recentlyPlayedSongAlbumCover = recentlyPlayedSong.album.images[0].url;
+
     return new Response(
       JSON.stringify({
         song: recenntlyPlayedSongName,
         artist: recentlyPlayedSongArtist,
+        albumCover: recentlyPlayedSongAlbumCover,
       }),
       {
         status: 200,
