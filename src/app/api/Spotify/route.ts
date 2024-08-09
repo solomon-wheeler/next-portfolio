@@ -48,12 +48,19 @@ export async function GET(req: any) {
       },
     });
 
-    const recentlyPlayedSong = recentlyPlayedResponse.data.items[0].track.name;
-
-    return new Response(JSON.stringify({ song: recentlyPlayedSong }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
-    });
+    const recentlyPlayedSong = recentlyPlayedResponse.data.items[0].track;
+    const recenntlyPlayedSongName = recentlyPlayedSong.name;
+    const recentlyPlayedSongArtist = recentlyPlayedSong.artists[0].name;
+    return new Response(
+      JSON.stringify({
+        song: recenntlyPlayedSongName,
+        artist: recentlyPlayedSongArtist,
+      }),
+      {
+        status: 200,
+        headers: { "Content-Type": "application/json" },
+      }
+    );
   } catch (error) {
     console.log(error);
     return new Response(
