@@ -50,6 +50,7 @@ export async function GET(req: any) {
       currentlyPlayingResponse.status === 200 &&
       currentlyPlayingResponse.data?.item
     ) {
+      console.log("Currently playing song found");
       const currentlyPlayingSong = currentlyPlayingResponse.data.item;
       const currentlyPlayingSongName = currentlyPlayingSong.name;
       const currentlyPlayingSongArtist = currentlyPlayingSong.artists[0].name;
@@ -67,6 +68,9 @@ export async function GET(req: any) {
           headers: { "Content-Type": "application/json" },
         }
       );
+    } else {
+      console.log("No currently playing song found");
+      console.log(currentlyPlayingResponse);
     }
 
     const recentlyPlayedResponse = await axios({
@@ -81,6 +85,7 @@ export async function GET(req: any) {
     const recenntlyPlayedSongName = recentlyPlayedSong.name;
     const recentlyPlayedSongArtist = recentlyPlayedSong.artists[0].name;
     const recentlyPlayedSongAlbumCover = recentlyPlayedSong.album.images[0].url;
+    console.log("Recently playing song found");
 
     return new Response(
       JSON.stringify({
