@@ -62,6 +62,7 @@ export async function GET(req: any) {
           song: currentlyPlayingSongName,
           artist: currentlyPlayingSongArtist,
           albumCover: currentlyPlayingSongAlbumCover,
+          type: "currently-playing",
         }),
         {
           status: 200,
@@ -92,6 +93,7 @@ export async function GET(req: any) {
         song: recenntlyPlayedSongName,
         artist: recentlyPlayedSongArtist,
         albumCover: recentlyPlayedSongAlbumCover,
+        type: "recently-played",
       }),
       {
         status: 200,
