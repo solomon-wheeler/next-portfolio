@@ -7,7 +7,7 @@ import CIconImage from '../../../public/C_Programming_Language.svg.png';
 import JavaScriptIconImage from '../../../public/64px-JavaScript-logo.png';
 import KubernetesLogo from '../../../public/Kubernetes_logo_without_workmark.svg';
 
-function ReactIcon(props: any) {
+export function ReactIcon(props: any) {
   return (
     <a
       title="Facebook, Public domain, via Wikimedia Commons"
@@ -25,7 +25,7 @@ function ReactIcon(props: any) {
   );
 }
 
-function PythonIcon(props: any) {
+export function PythonIcon(props: any) {
   return (
     <a
       title="The people from the Tango! project., CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons"
@@ -42,7 +42,7 @@ function PythonIcon(props: any) {
     </a>
   );
 }
-function CodeIcon(props: any) {
+export function CodeIcon(props: any) {
   return (
     <svg
       {...props}
@@ -61,7 +61,7 @@ function CodeIcon(props: any) {
     </svg>
   );
 }
-function GithubIcon(props: any) {
+export function GithubIcon(props: any) {
   return (
     <svg
       {...props}
@@ -81,7 +81,7 @@ function GithubIcon(props: any) {
   );
 }
 
-function CIcon(props: any) {
+export function CIcon(props: any) {
   return (
     <a
       title="ElodinKaldwin, Public domain, via Wikimedia Commons"
@@ -99,7 +99,7 @@ function CIcon(props: any) {
   );
 }
 
-function NestJSIcon(props: any) {
+export function NestJSIcon(props: any) {
   return (
     <a
       title="NestJS, Public domain, via Wikimedia Commons"
@@ -116,7 +116,7 @@ function NestJSIcon(props: any) {
     </a>
   );
 }
-function JavaSciptIcon(props: any) {
+export function JavaSciptIcon(props: any) {
   return (
     <a
       title="Christopher Williams, Public domain, via Wikimedia Commons"
@@ -134,7 +134,7 @@ function JavaSciptIcon(props: any) {
   );
 }
 
-function KubernetesIcon(props: any) {
+export function KubernetesIcon(props: any) {
   return (
     <a
       title="Google, Public domain, via Wikimedia Commons"
@@ -151,7 +151,7 @@ function KubernetesIcon(props: any) {
     </a>
   );
 }
-function NavigationIcon(props: any) {
+export function NavigationIcon(props: any) {
   return (
     <svg
       {...props}
@@ -170,7 +170,7 @@ function NavigationIcon(props: any) {
   );
 }
 
-function TypeIcon(props: any) {
+export function TypeIcon(props: any) {
   return (
     <svg
       {...props}

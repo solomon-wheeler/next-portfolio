@@ -12,6 +12,7 @@ import { row2Items } from '../Icons/proggramingLanguage.icon';
 import { PopupDialog } from './popupDialog.component';
 import { SpotifyPlaying } from './SpotifyPlaying/spotifyPlaying.component';
 import Header from './Header/header.component';
+import TechStack from './TechStack/TechStack.component';
 
 const modules = [
   { name: 'Computer systems architecture 1 & 2', mark: 81 },
@@ -186,6 +187,29 @@ export default function Homepage() {
           </div>
         </div>
       </div>
+      <TechStack />
+      {/* <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-black dark:text-white">
+        And other languages and frameworks, such as ..{' '}
+      </p>
+      <div className="flex justify-center">
+        <ul className="list-disc space-y-2">
+          {row1Items.map((item, index) => (
+            <li key={index} className="flex items-center space-x-2">
+              <RoughNotation
+                type="highlight"
+                color="#007BFF"
+                show={inView}
+                animationDelay={delayTiming(4)}
+              >
+                <item.Icon className="w-5 h-5" />
+              </RoughNotation>
+              <span className="font-medium text-black dark:text-white">
+                {item.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div> */}
       <section className="py-12 md:py-24 lg:py-32 xl:py-48" key="section2">
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 md:gap-10">
@@ -287,7 +311,6 @@ export default function Homepage() {
         </div>
       </section>
       <SpotifyPlaying />
-
       <section
         className="bg-gray-50 dark:bg-gray-900 py-12 md:py-24 lg:py-32 xl:py-48"
         key="section4"
