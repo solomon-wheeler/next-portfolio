@@ -1,25 +1,25 @@
-import Link from "next/link";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
+import Link from 'next/link';
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
 
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { RoughNotation } from "react-rough-notation";
-import { useInView } from "react-intersection-observer";
-import { useState, ChangeEvent, useEffect } from "react";
-import { row1Items } from "../Icons/proggramingLanguage.icon";
-import { row2Items } from "../Icons/proggramingLanguage.icon";
-import { PopupDialog } from "./popupDialog.component";
-import { SpotifyPlaying } from "./SpotifyPlaying/spotifyPlaying.component";
-import Header from "./Header/header.component";
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { RoughNotation } from 'react-rough-notation';
+import { useInView } from 'react-intersection-observer';
+import { useState, ChangeEvent, useEffect } from 'react';
+import { row1Items } from '../Icons/proggramingLanguage.icon';
+import { row2Items } from '../Icons/proggramingLanguage.icon';
+import { PopupDialog } from './popupDialog.component';
+import { SpotifyPlaying } from './SpotifyPlaying/spotifyPlaying.component';
+import Header from './Header/header.component';
 
 const modules = [
-  { name: "Computer systems architecture 1 & 2", mark: 81 },
-  { name: "Discrete mathematics and database", mark: 95 },
-  { name: "Principles of programming 1 & 2", mark: 81 },
-  { name: "Mathematics for computation", mark: 76 },
-  { name: "Artificial intelligence", mark: 84 },
-  { name: "Software processes and modelling", mark: 68 },
+  { name: 'Computer systems architecture 1 & 2', mark: 81 },
+  { name: 'Discrete mathematics and database', mark: 95 },
+  { name: 'Principles of programming 1 & 2', mark: 81 },
+  { name: 'Mathematics for computation', mark: 76 },
+  { name: 'Artificial intelligence', mark: 84 },
+  { name: 'Software processes and modelling', mark: 68 },
 ];
 
 export default function Homepage() {
@@ -34,13 +34,13 @@ export default function Homepage() {
     triggerOnce: false, // Change this to false if you want the animation to trigger again whenever it comes in view
   });
 
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
 
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
   const [dialogOpen, setDialogOpen] = useState(false);
-  const [dialogDescription, setDialogDescription] = useState("");
-  const [dialogTitle, setDialogTitle] = useState("");
+  const [dialogDescription, setDialogDescription] = useState('');
+  const [dialogTitle, setDialogTitle] = useState('');
   const [isEmailLoading, setIsEmailLoading] = useState(false);
 
   const handleNameChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -60,22 +60,22 @@ export default function Homepage() {
     setIsEmailLoading(true);
 
     const requestBody = JSON.stringify({ name, email, message });
-    const response = await fetch("/api/sendEmail", {
-      method: "POST",
+    const response = await fetch('/api/sendEmail', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: requestBody,
     });
 
     if (response.ok) {
-      setDialogTitle("Success🎉");
-      setDialogDescription("Email sent successfully");
+      setDialogTitle('Success🎉');
+      setDialogDescription('Email sent successfully');
     } else {
       console.log(response.status);
       console.log(response);
-      setDialogTitle("Uh ohh...❌");
-      setDialogDescription("Error sending email");
+      setDialogTitle('Uh ohh...❌');
+      setDialogDescription('Error sending email');
     }
     setDialogOpen(true);
     setIsEmailLoading(false);
@@ -97,8 +97,8 @@ export default function Homepage() {
             </div>
             <div className="space-y-4">
               <p className="text-gray-500 md:text-xl/relaxed dark:text-gray-400">
-                {" "}
-                An{" "}
+                {' '}
+                An{' '}
                 <RoughNotation
                   type="box"
                   color="#ADD8E6"
@@ -107,7 +107,7 @@ export default function Homepage() {
                 >
                   outgoing
                 </RoughNotation>
-                ,{" "}
+                ,{' '}
                 <RoughNotation
                   type="underline"
                   color="#ADD8E6"
@@ -123,28 +123,28 @@ export default function Homepage() {
                   animationDelay={delayTiming(2)}
                 >
                   , team worker
-                </RoughNotation>{" "}
-                ,with a strong ability for{" "}
+                </RoughNotation>{' '}
+                ,with a strong ability for{' '}
                 <RoughNotation
                   type="underline"
                   color="#ADD8E6"
                   show={true}
                   animationDelay={delayTiming(3)}
                 >
-                  communication{" "}
+                  communication{' '}
                 </RoughNotation>
                 and supporting the development of others. Highly technically
                 competent , with a specific interest in data science, machine
                 learning and problem-solving. An exceptional academic record and
-                the{" "}
+                the{' '}
                 <RoughNotation
                   type="circle"
                   color="#ADD8E6"
                   show={true}
                   animationDelay={delayTiming(4)}
                 >
-                  enthusiasm{" "}
-                </RoughNotation>{" "}
+                  enthusiasm{' '}
+                </RoughNotation>{' '}
                 to adapt to new challenges. Currently studying a degree in
                 Computer Science at the University of Bath.
               </p>
@@ -313,7 +313,7 @@ export default function Homepage() {
                 <p className="text-sm text-gray-500 text-black dark:text-white">
                   A Sudoku solving implementation which models the Sudoku as a
                   constraint satisfaction problem, and uses a depth-first search
-                  with backtracking to explore the search space.{" "}
+                  with backtracking to explore the search space.{' '}
                 </p>
               </div>
               <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800 text-black dark:text-white">
@@ -350,7 +350,7 @@ export default function Homepage() {
                   className="font-medium underline text-black dark:text-white"
                   href="#"
                 >
-                  Mental Health Hackathon Project{" "}
+                  Mental Health Hackathon Project{' '}
                 </Link>
                 <p className="text-sm text-gray-500 text-black dark:text-white">
                   It lets you write messages to others when you are feeling
@@ -371,7 +371,7 @@ export default function Homepage() {
                 Contact Me
               </h2>
               <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 text-black dark:text-white">
-                {"Get in touch 😀"}
+                {'Get in touch 😀'}
               </p>
             </div>
             <form className="grid gap-4 md:gap-6">
@@ -422,7 +422,7 @@ export default function Homepage() {
                 type="submit"
                 onClick={handleSubmit}
                 className={`bg-blue-500 text-white px-4 py-2 ${
-                  isEmailLoading ? "animate-pulse" : ""
+                  isEmailLoading ? 'animate-pulse' : ''
                 }`}
               >
                 Submit

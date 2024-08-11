@@ -1,6 +1,6 @@
-"use client";
-import Homepage from "@/components/component/homepage.component"; // Import the 'Homepage' component correctly
-import { ThemeProvider, useTheme } from "next-themes";
+'use client';
+import Homepage from '@/components/component/homepage.component'; // Import the 'Homepage' component correctly
+import { ThemeProvider, useTheme } from 'next-themes';
 
 export default function Home() {
   return (
