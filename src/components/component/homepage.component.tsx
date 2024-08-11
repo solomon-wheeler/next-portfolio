@@ -210,7 +210,7 @@ export default function Homepage() {
           ))}
         </ul>
       </div> */}
-      <section className="py-12 md:py-24 lg:py-32 xl:py-48" key="section2">
+      {/* <section className="py-12 md:py-24 lg:py-32 xl:py-48" key="section2">
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 md:gap-10">
             <div className="space-y-2">
@@ -269,7 +269,7 @@ export default function Homepage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="py-12 md:py-24 lg:py-32 xl:py-48" key="section3">
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 md:gap-10">
