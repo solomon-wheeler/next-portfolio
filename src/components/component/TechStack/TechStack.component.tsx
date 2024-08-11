@@ -140,7 +140,7 @@ export default function TechStack() {
             key={index}
             className={`p-4 border-dashed border-2 border-gray-300 rounded-lg transition-colors duration-300 ease-in-out 
          ${index % 2 === 0 ? 'hover:bg-gray-100 dark:hover:bg-gray-700' : 'hover:bg-gray-200 dark:hover:bg-gray-600'}`}
-            style={{ minWidth: '1000px' }} // Set a default minimum width
+            style={{ minWidth: '50vw' }}
           >
             <h3
               className="text-2xl font-semibold text-black dark:text-white mb-4 cursor-pointer"
@@ -150,7 +150,7 @@ export default function TechStack() {
             </h3>
 
             {openSections[index] && (
-              <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-5">
                 {category.items.map((tech, techIndex) => (
                   <div
                     key={techIndex}
