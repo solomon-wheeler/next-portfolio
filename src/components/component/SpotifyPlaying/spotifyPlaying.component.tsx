@@ -1,23 +1,23 @@
-import { useState, useEffect } from "react";
-import "./spotifyPlaying.styles.css";
+import { useState, useEffect } from 'react';
+import './spotifyPlaying.styles.css';
 
 export const SpotifyPlaying = () => {
-  const [song, setSong] = useState("Getting data from spotify...");
-  const [artist, setArtist] = useState("");
-  const [albumCover, setAlbumCover] = useState("");
+  const [song, setSong] = useState('Getting data from spotify...');
+  const [artist, setArtist] = useState('');
+  const [albumCover, setAlbumCover] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/Spotify");
+        const response = await fetch('/api/Spotify');
         const data = await response.json();
         setSong(data.song);
         setArtist(data.artist);
         setAlbumCover(data.albumCover);
       } catch (error) {
         console.error(error);
-        setSong("Nothing playing right now");
+        setSong('Nothing playing right now');
       }
       setIsLoading(false);
     };
@@ -30,7 +30,7 @@ export const SpotifyPlaying = () => {
       <div className="container px-4 md:px-6">
         <div className="grid gap-8 md:gap-10">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black dark:text-white">
-            {isLoading ? "Loading..." : "🎧Currently playing"}
+            {isLoading ? 'Loading...' : '🎧Currently playing'}
           </h2>
           <div className="flex items-center">
             {!isLoading && albumCover && (
@@ -52,7 +52,7 @@ export const SpotifyPlaying = () => {
               {!isLoading && (
                 <div
                   className="flex space-x-1 sm:space-x-2 md:space-x-4 mt-1"
-                  style={{ transform: "scaleY(-1)" }}
+                  style={{ transform: 'scaleY(-1)' }}
                 >
                   {Array(15)
                     .fill(null)
@@ -68,7 +68,7 @@ export const SpotifyPlaying = () => {
                             animation: `equalizer ${
                               ((i % 5) + 1) * 350
                             }ms infinite`,
-                            height: "1rem",
+                            height: '1rem',
                           }}
                         ></div>
                       </div>

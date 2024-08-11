@@ -1,8 +1,9 @@
-"use client";
-import { useTheme } from "next-themes";
+'use client';
+
+import { useTheme } from 'next-themes';
 
 const getIconColour = (theme: string | undefined): string => {
-  return theme === "dark" ? "#ffffff" : "#000000";
+  return theme === 'dark' ? '#ffffff' : '#000000';
 };
 
 export function GitIcon(props: any) {

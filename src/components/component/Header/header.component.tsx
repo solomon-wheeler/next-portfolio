@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { Toggle } from "@/components/ui/toggle";
+import Link from 'next/link';
+import { Toggle } from '@/components/ui/toggle';
 
 import {
   HomeIcon,
@@ -7,19 +7,19 @@ import {
   LinkedinIcon,
   GitIcon,
   SunIcon,
-} from "@/components/Icons/nav.icon";
-import { useTheme } from "next-themes";
+} from '@/components/Icons/nav.icon';
+import { useTheme } from 'next-themes';
 
 export default function Header() {
   const { theme, setTheme } = useTheme();
 
-  const darkModeActive = theme === "dark";
+  const darkModeActive = theme === 'dark';
 
   const toggleTheme = () => {
     if (darkModeActive) {
-      setTheme("light");
+      setTheme('light');
     } else {
-      setTheme("dark");
+      setTheme('dark');
     }
   };
 

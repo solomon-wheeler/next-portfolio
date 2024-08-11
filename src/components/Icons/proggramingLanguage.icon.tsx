@@ -1,10 +1,11 @@
-import ReactIconSVG from "../../../public/react-icon.svg";
-import PythonIconImage from "../../../public/Python.svg.png";
-import Image from "next/image";
-import CIconImage from "../../../public/C_Programming_Language.svg.png";
-import NextIconIamge from "../../../public/32px-NestJS.png";
-import JavaScriptIconImage from "../../../public/64px-JavaScript-logo.png";
-import KubernetesLogo from "../../../public/Kubernetes_logo_without_workmark.svg";
+import React from 'react';
+import NextIconIamge from '../../../public/32px-NestJS.png';
+import ReactIconSVG from '../../../public/react-icon.svg';
+import PythonIconImage from '../../../public/Python.svg.png';
+import Image from 'next/image';
+import CIconImage from '../../../public/C_Programming_Language.svg.png';
+import JavaScriptIconImage from '../../../public/64px-JavaScript-logo.png';
+import KubernetesLogo from '../../../public/Kubernetes_logo_without_workmark.svg';
 
 function ReactIcon(props: any) {
   return (
@@ -17,7 +18,7 @@ function ReactIcon(props: any) {
         src={ReactIconSVG}
         width="24"
         height="24"
-        style={{ filter: "grayscale(50%)" }}
+        style={{ filter: 'grayscale(50%)' }}
         {...props}
       />
     </a>
@@ -35,7 +36,7 @@ function PythonIcon(props: any) {
         src={PythonIconImage}
         width="24"
         height="24"
-        style={{ filter: "grayscale(50%)" }}
+        style={{ filter: 'grayscale(50%)' }}
         {...props}
       />
     </a>
@@ -91,7 +92,7 @@ function CIcon(props: any) {
         src={CIconImage}
         width="24"
         height="24"
-        style={{ filter: "grayscale(50%)" }}
+        style={{ filter: 'grayscale(50%)' }}
         {...props}
       />
     </a>
@@ -109,7 +110,7 @@ function NestJSIcon(props: any) {
         src={NextIconIamge}
         width="24"
         height="24"
-        style={{ filter: "grayscale(50%)" }}
+        style={{ filter: 'grayscale(50%)' }}
         {...props}
       />
     </a>
@@ -126,7 +127,7 @@ function JavaSciptIcon(props: any) {
         src={JavaScriptIconImage}
         width="24"
         height="24"
-        style={{ filter: "grayscale(50%)" }}
+        style={{ filter: 'grayscale(50%)' }}
         {...props}
       />
     </a>
@@ -144,7 +145,7 @@ function KubernetesIcon(props: any) {
         src={KubernetesLogo}
         width="24"
         height="24"
-        style={{ filter: "grayscale(50%)" }}
+        style={{ filter: 'grayscale(50%)' }}
         {...props}
       />
     </a>
@@ -191,17 +192,17 @@ function TypeIcon(props: any) {
 }
 
 export const row1Items = [
-  { name: "Python", Icon: PythonIcon },
-  { name: "React", Icon: ReactIcon },
-  { name: "SQL", Icon: CodeIcon },
-  { name: "Git", Icon: GithubIcon },
-  { name: "C", Icon: CIcon },
+  { name: 'Python', Icon: PythonIcon },
+  { name: 'React', Icon: ReactIcon },
+  { name: 'SQL', Icon: CodeIcon },
+  { name: 'Git', Icon: GithubIcon },
+  { name: 'C', Icon: CIcon },
 ];
 
 export const row2Items = [
-  { name: "TypeScript/JavaScript", Icon: JavaSciptIcon },
-  { name: "NestJS", Icon: NestJSIcon },
-  { name: "Kubernetes", Icon: KubernetesIcon },
-  { name: "Next.js", Icon: NavigationIcon },
-  { name: "TypeScript", Icon: TypeIcon },
+  { name: 'TypeScript/JavaScript', Icon: JavaSciptIcon },
+  { name: 'NestJS', Icon: NestJSIcon },
+  { name: 'Kubernetes', Icon: KubernetesIcon },
+  { name: 'Next.js', Icon: NavigationIcon },
+  { name: 'TypeScript', Icon: TypeIcon },
 ];
