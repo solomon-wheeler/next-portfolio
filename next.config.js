@@ -1,4 +1,7 @@
 module.exports = {
+  eslint: {
+    ignoreDuringBuilds: false,
+  },
   async rewrites() {
     return [
       {
