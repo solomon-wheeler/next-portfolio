@@ -62,7 +62,7 @@ const techStack = [
       {
         name: 'Databases',
         description:
-          'Experience with MSQL, including relational databases, querying and optimisation. This was done using ORMs, functions, views and stored procedures. As well as noSQL databases like Firebase.',
+          'Experience with MSSQL, including relational databases, querying and optimisation. This was done using ORMs, functions, views and stored procedures. As well as noSQL databases like Firebase.',
         icon: <DatabaseIcon />,
       },
       {
