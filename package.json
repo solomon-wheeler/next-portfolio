@@ -44,6 +44,7 @@
     "@babel/preset-env": "^7.25.3",
     "@babel/preset-react": "^7.24.7",
     "@babel/preset-typescript": "^7.24.7",
+    "@swc/jest": "^0.2.36",
     "@testing-library/jest-dom": "^6.4.8",
     "@types/jest": "^29.5.12",
     "@types/node": "^20",
