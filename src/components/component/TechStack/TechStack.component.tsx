@@ -76,12 +76,6 @@ const techStack = [
     category: 'DevOps',
     items: [
       {
-        name: 'Docker',
-        description:
-          'Proficient in using Docker to containerize and deploy applications, including experience with Docker Compose and container orchestration platforms like Kubernetes.',
-        icon: <DockIcon />,
-      },
-      {
         name: 'CI',
         description:
           'Involvement with CI pipelines, including GitHub Actions, Gitlab pipelines, and Jenkins. For instance, setting up a CI pipeline for this website, including build, linting and testing ',
