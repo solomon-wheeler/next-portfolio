@@ -169,7 +169,13 @@ export default function Homepage() {
                     Email
                   </h3>
                   <p className="text-black dark:text-white">
-                    📧hello@solomonwheeler.co.uk
+                    📧
+                    <a
+                      href="mailto:hello@solomonwheeler.co.uk"
+                      className="underline"
+                    >
+                      hello@solomonwheeler.co.uk
+                    </a>
                   </p>
                 </div>
                 <div>
@@ -177,7 +183,15 @@ export default function Homepage() {
                     Website
                   </h3>
                   <p className="text-black dark:text-white">
-                    🏡solomonwheeler.co.uk
+                    🏡
+                    <a
+                      href="https://solomonwheeler.co.uk"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline"
+                    >
+                      solomonwheeler.co.uk
+                    </a>
                   </p>
                 </div>
               </div>
@@ -302,9 +316,9 @@ export default function Homepage() {
                 ))}
               </div>
             </div>
-            <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            {/* <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
               And I have the following other qualifications:
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
