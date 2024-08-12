@@ -13,7 +13,7 @@ type DialogDemoProps = {
   dialogTitle: string;
 };
 
-export function PopupDialog({
+export default function PopupDialog({
   dialogOpen,
   setDialogOpen,
   dialogDescription,

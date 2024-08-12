@@ -7,6 +7,8 @@ import {
   NestJSIcon,
   JavaSciptIcon,
   CodeIcon,
+  PromIcon,
+  NextIcon,
 } from '../../Icons/proggramingLanguage.icon';
 
 const techStack = [
@@ -22,7 +24,7 @@ const techStack = [
       {
         name: 'Next.js',
         description: `Experience in building server-rendered React applications (like the one you're looking at) with Next.js, leveraging file-based routing, API routes, and static site generation.`,
-        icon: <CodepenIcon />,
+        icon: <NextIcon />,
       },
       {
         name: 'Tailwind CSS',
@@ -68,7 +70,7 @@ const techStack = [
       {
         name: 'Java',
         description: 'Experience with Java',
-        icon: <DatabaseIcon />,
+        icon: <CodeIcon />,
       },
     ],
   },
@@ -98,7 +100,7 @@ const techStack = [
         name: 'Observability',
         description:
           'Experience with observability tools like Grafana and Prometheus, (try typing /metrics at the end of the URL)',
-        icon: <NestJSIcon />,
+        icon: <PromIcon />,
       },
     ],
   },

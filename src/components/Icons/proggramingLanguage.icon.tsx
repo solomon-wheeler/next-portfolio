@@ -6,6 +6,8 @@ import Image from 'next/image';
 import CIconImage from '../../../public/C_Programming_Language.svg.png';
 import JavaScriptIconImage from '../../../public/64px-JavaScript-logo.png';
 import KubernetesLogo from '../../../public/Kubernetes_logo_without_workmark.svg';
+import NextIconImage from '../../../public/Nextjs-logo.svg';
+import PromIconImage from '../../../public/Prometheus_software_logo.svg';
 
 export function ReactIcon(props: any) {
   return (
@@ -191,18 +193,38 @@ export function TypeIcon(props: any) {
   );
 }
 
-export const row1Items = [
-  { name: 'Python', Icon: PythonIcon },
-  { name: 'React', Icon: ReactIcon },
-  { name: 'SQL', Icon: CodeIcon },
-  { name: 'Git', Icon: GithubIcon },
-  { name: 'C', Icon: CIcon },
-];
+export function NextIcon(props: any) {
+  return (
+    <a
+      title="Vercel, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+      href="https://commons.wikimedia.org/wiki/File:Nextjs-logo.svg"
+    >
+      <Image
+        alt="NextJSIcon"
+        src={NextIconImage}
+        width="24"
+        height="24"
+        style={{ filter: 'grayscale(50%)' }}
+        {...props}
+      />
+    </a>
+  );
+}
 
-export const row2Items = [
-  { name: 'TypeScript/JavaScript', Icon: JavaSciptIcon },
-  { name: 'NestJS', Icon: NestJSIcon },
-  { name: 'Kubernetes', Icon: KubernetesIcon },
-  { name: 'Next.js', Icon: NavigationIcon },
-  { name: 'TypeScript', Icon: TypeIcon },
-];
+export function PromIcon(props: any) {
+  return (
+    <a
+      title="Alexander Schwartz (ahus1)[1][2], Apache License 2.0 &lt;http://www.apache.org/licenses/LICENSE-2.0&gt;, via Wikimedia Common"
+      href="https://commons.wikimedia.org/wiki/File:Prometheus_software_logo.svg"
+    >
+      <Image
+        alt="PromIcon"
+        src={PromIconImage}
+        width="24"
+        height="24"
+        style={{ filter: 'grayscale(50%)' }}
+        {...props}
+      />
+    </a>
+  );
+}

@@ -6,13 +6,11 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { RoughNotation } from 'react-rough-notation';
 import { useInView } from 'react-intersection-observer';
-import { useState, ChangeEvent, useEffect } from 'react';
-import { row1Items } from '../Icons/proggramingLanguage.icon';
-import { row2Items } from '../Icons/proggramingLanguage.icon';
-import { PopupDialog } from './popupDialog.component';
+import { useState, ChangeEvent } from 'react';
 import { SpotifyPlaying } from './SpotifyPlaying/spotifyPlaying.component';
 import Header from './Header/header.component';
 import TechStack from './TechStack/TechStack.component';
+import PopupDialog from './popupDialog.component';
 
 const modules = [
   { name: 'Computer systems architecture 1 & 2', mark: 81 },
