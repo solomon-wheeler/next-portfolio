@@ -1,5 +1,4 @@
 import { RoughNotation } from 'react-rough-notation';
-import { useInView } from 'react-intersection-observer';
 import { SpotifyPlaying } from './SpotifyPlaying/spotifyPlaying.component';
 import Header from './Header/header.component';
 import TechStack from './TechStack/TechStack.component';
@@ -14,18 +13,14 @@ const modules = [
   { name: 'Software processes and modelling', mark: 68 },
 ];
 
+const initialDelay = 500;
+const delayConst = 1000;
+
+export const delayTiming = (index: number) => {
+  return initialDelay + index * delayConst;
+};
+
 export default function Homepage() {
-  const initialDelay = 500;
-  const delayConst = 1000;
-
-  const delayTiming = (index: number) => {
-    return initialDelay + index * delayConst;
-  };
-
-  const [ref, inView] = useInView({
-    triggerOnce: false, // Change this to false if you want the animation to trigger again whenever it comes in view
-  });
-
   return (
     <>
       <Header />
@@ -146,88 +141,7 @@ export default function Homepage() {
         </div>
       </div>
       <TechStack />
-      {/* <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-black dark:text-white">
-        And other languages and frameworks, such as ..{' '}
-      </p>
-      <div className="flex justify-center">
-        <ul className="list-disc space-y-2">
-          {row1Items.map((item, index) => (
-            <li key={index} className="flex items-center space-x-2">
-              <RoughNotation
-                type="highlight"
-                color="#007BFF"
-                show={inView}
-                animationDelay={delayTiming(4)}
-              >
-                <item.Icon className="w-5 h-5" />
-              </RoughNotation>
-              <span className="font-medium text-black dark:text-white">
-                {item.name}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div> */}
-      {/* <section className="py-12 md:py-24 lg:py-32 xl:py-48" key="section2">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-8 md:gap-10">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold text-black dark:text-white tracking-tighter sm:text-4xl md:text-5xl">
-                My Skills
-              </h2>
-              <p className="text-gray-500 text-black dark:text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                I have a depth of understanding in succesfully building,
-                testing, and deploying software applications.
-              </p>
-              <p className="text-gray-500  text-black dark:text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Here are some of languages and tools I have experience with:
-              </p>
-            </div>
-            <div className="grid gap-4 md:gap-6 lg:gap-8" ref={ref}>
-              <div className="grid gap-2 md:grid-cols-2">
-                {row1Items.map((item, index) => (
-                  <div
-                    key={index}
-                    className="inline-flex items-center space-x-2"
-                  >
-                    <RoughNotation
-                      type="highlight"
-                      color="#007BFF"
-                      show={inView}
-                      animationDelay={delayTiming(4)}
-                    >
-                      <item.Icon className="w-5 h-5" />
-                    </RoughNotation>
-                    <span className="font-medium text-black dark:text-white">
-                      {item.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <div className="grid gap-2 md:grid-cols-2">
-                {row2Items.map((item, index) => (
-                  <div
-                    key={index}
-                    className="inline-flex items-center space-x-2"
-                  >
-                    <RoughNotation
-                      type="highlight"
-                      color="#007BFF"
-                      show={inView}
-                      animationDelay={delayTiming(5)}
-                    >
-                      <item.Icon className="w-5 h-5" />
-                    </RoughNotation>
-                    <span className="font-medium text-black dark:text-white">
-                      {item.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
+
       <section className="py-12 md:py-24 lg:py-32 xl:py-48" key="section3">
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 md:gap-10">

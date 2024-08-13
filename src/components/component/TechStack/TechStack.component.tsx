@@ -11,6 +11,9 @@ import {
   NextIcon,
   GithubIcon,
 } from '../../Icons/proggramingLanguage.icon';
+import { useInView } from 'react-intersection-observer';
+import { RoughNotation } from 'react-rough-notation';
+import { delayTiming } from '../homepage.component';
 
 const techStack = [
   {
@@ -108,6 +111,10 @@ const techStack = [
 ];
 
 export default function TechStack() {
+  const [ref, inView] = useInView({
+    triggerOnce: false, // Change this to false if you want the animation to trigger again whenever it comes in view
+  });
+
   const [openSections, setOpenSections] = useState([false, false, false]);
 
   const toggleSection = (index: number) => {
@@ -153,12 +160,23 @@ export default function TechStack() {
                     key={techIndex}
                     className="relative overflow-hidden rounded-lg bg-card p-6 transition-transform duration-300 ease-in-out group hover:shadow-xl hover:-translate-y-2 bg-gray-50 dark:bg-gray-900"
                   >
-                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary">
+                    <div
+                      ref={ref}
+                      className="flex h-16 w-16 items-center justify-center rounded-full bg-primary"
+                    >
                       {tech.icon}
                     </div>
-                    <h3 className="mt-4 text-lg font-semibold text-black dark:text-white">
-                      {tech.name}
-                    </h3>
+                    <RoughNotation
+                      type="highlight"
+                      color="#007BFF"
+                      show={inView}
+                      animationDelay={delayTiming(techIndex)}
+                    >
+                      <h3 className="mt-4 text-lg font-semibold text-black dark:text-white">
+                        {tech.name}
+                      </h3>
+                    </RoughNotation>
+
                     <p className="text-sm text-muted-foreground text-black dark:text-white">
                       {tech.description}
                     </p>
