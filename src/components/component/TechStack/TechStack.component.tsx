@@ -9,6 +9,7 @@ import {
   CodeIcon,
   PromIcon,
   NextIcon,
+  GithubIcon,
 } from '../../Icons/proggramingLanguage.icon';
 
 const techStack = [
@@ -81,7 +82,7 @@ const techStack = [
         name: 'CI',
         description:
           'Involvement with CI pipelines, including GitHub Actions, Gitlab pipelines, and Jenkins. For instance, setting up a CI pipeline for this website, including build, linting and testing ',
-        icon: <CodeIcon />,
+        icon: <GithubIcon />,
       },
       {
         name: 'CD',
