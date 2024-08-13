@@ -4,7 +4,7 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from '../ui/dialog';
+} from '../../ui/dialog';
 
 type DialogDemoProps = {
   dialogOpen: boolean;
@@ -18,7 +18,7 @@ export default function PopupDialog({
   setDialogOpen,
   dialogDescription,
   dialogTitle,
-}: DialogDemoProps) {
+}: Readonly<DialogDemoProps>) {
   return (
     <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
       <DialogContent className="sm:max-w-[425px]">
