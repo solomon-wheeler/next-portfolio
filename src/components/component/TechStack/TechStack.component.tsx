@@ -9,7 +9,6 @@ import {
   CodeIcon,
   PromIcon,
   NextIcon,
-  RocketIcon,
   GithubIcon,
 } from '../../Icons/proggramingLanguage.icon';
 
