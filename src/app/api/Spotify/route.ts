@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import axios from 'axios';
 import dotenv from 'dotenv';
 import qs from 'qs';

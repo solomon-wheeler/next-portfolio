@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './spotifyPlaying.styles.css';
 
 export const SpotifyPlaying = () => {
@@ -16,7 +16,6 @@ export const SpotifyPlaying = () => {
         setArtist(data.artist);
         setAlbumCover(data.albumCover);
       } catch (error) {
-        console.error(error);
         setSong('Nothing playing right now');
       }
       setIsLoading(false);
@@ -32,13 +31,13 @@ export const SpotifyPlaying = () => {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black dark:text-white">
             {isLoading ? 'Loading...' : '🎧Currently playing'}
           </h2>
-          <div className="flex items-center">
+          <div className="flex flex-col sm:flex-row md:flex-row items-center">
             {!isLoading && albumCover && (
-              <div className="relative w-10 h-10 sm:w-2 sm:h-2 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40 mr-4 spin-slow">
+              <div className="relative w-24 h-24 sm:w-5 sm:h-5 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40 sm:mr-4 spin-slow mb-4 sm:mb-0">
                 <img
                   src={albumCover}
                   alt="Album Cover"
-                  className="w-full h-full object-co1ver rounded-full album-cover"
+                  className="w-full h-full object-cover rounded-full album-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-2 h-2 sm:w-1 sm:h-1 md:w-3 md:h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 bg-white dark:bg-black rounded-full"></div>
@@ -65,12 +64,10 @@ export const SpotifyPlaying = () => {
                           key={i}
                           className={`w-0.5 sm:w-1 md:w-1.5 lg:w-2 xl:w-2.5 h-1 bg-lightblue rounded`}
                           style={{
-                            animation: `equalizer ${
-                              ((i % 5) + 1) * 350
-                            }ms infinite`,
+                            animation: `equalizer ${((i % 5) + 1) * 350}ms infinite`,
                             height: '1rem',
                           }}
-                        ></div>
+                        />
                       </div>
                     ))}
                 </div>

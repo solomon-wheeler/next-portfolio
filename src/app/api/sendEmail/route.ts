@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import nodemailer from 'nodemailer';
 
 export async function POST(req: any) {

@@ -9,10 +9,10 @@ import KubernetesLogo from '../../../public/Kubernetes_logo_without_workmark.svg
 import NextIconImage from '../../../public/Nextjs-logo.svg';
 import PromIconImage from '../../../public/Prometheus_software_logo.svg';
 import GithubIconImage from '../../../public/Octicons-mark-github.svg';
-export function DatabaseIcon(props: any) {
+
+export function DatabaseIcon() {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -30,10 +30,9 @@ export function DatabaseIcon(props: any) {
   );
 }
 
-export function WindIcon(props: any) {
+export function WindIcon() {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -51,7 +50,7 @@ export function WindIcon(props: any) {
   );
 }
 
-export function ReactIcon(props: any) {
+export function ReactIcon() {
   return (
     <a
       title="Facebook, Public domain, via Wikimedia Commons"
@@ -63,13 +62,12 @@ export function ReactIcon(props: any) {
         width="24"
         height="24"
         style={{ filter: 'grayscale(50%)' }}
-        {...props}
       />
     </a>
   );
 }
 
-export function PythonIcon(props: any) {
+export function PythonIcon() {
   return (
     <a
       title="The people from the Tango! project., CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons"
@@ -81,15 +79,13 @@ export function PythonIcon(props: any) {
         width="24"
         height="24"
         style={{ filter: 'grayscale(50%)' }}
-        {...props}
       />
     </a>
   );
 }
-export function CodeIcon(props: any) {
+export function CodeIcon() {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -106,7 +102,7 @@ export function CodeIcon(props: any) {
   );
 }
 
-export function GithubIcon(props: any) {
+export function GithubIcon() {
   return (
     <a
       title="GitHub Inc., MIT &lt;http://opensource.org/licenses/mit-license.php&gt;, via Wikimedia Commons"
@@ -118,13 +114,12 @@ export function GithubIcon(props: any) {
         width="24"
         height="24"
         style={{ filter: 'grayscale(50%)' }}
-        {...props}
       />
     </a>
   );
 }
 
-export function CIcon(props: any) {
+export function CIcon() {
   return (
     <a
       title="ElodinKaldwin, Public domain, via Wikimedia Commons"
@@ -136,13 +131,12 @@ export function CIcon(props: any) {
         width="24"
         height="24"
         style={{ filter: 'grayscale(50%)' }}
-        {...props}
       />
     </a>
   );
 }
 
-export function NestJSIcon(props: any) {
+export function NestJSIcon() {
   return (
     <a
       title="NestJS, Public domain, via Wikimedia Commons"
@@ -154,12 +148,11 @@ export function NestJSIcon(props: any) {
         width="24"
         height="24"
         style={{ filter: 'grayscale(50%)' }}
-        {...props}
       />
     </a>
   );
 }
-export function JavaSciptIcon(props: any) {
+export function JavaSciptIcon() {
   return (
     <a
       title="Christopher Williams, Public domain, via Wikimedia Commons"
@@ -171,13 +164,12 @@ export function JavaSciptIcon(props: any) {
         width="24"
         height="24"
         style={{ filter: 'grayscale(50%)' }}
-        {...props}
       />
     </a>
   );
 }
 
-export function KubernetesIcon(props: any) {
+export function KubernetesIcon() {
   return (
     <a
       title="Google, Public domain, via Wikimedia Commons"
@@ -189,15 +181,13 @@ export function KubernetesIcon(props: any) {
         width="24"
         height="24"
         style={{ filter: 'grayscale(50%)' }}
-        {...props}
       />
     </a>
   );
 }
-export function NavigationIcon(props: any) {
+export function NavigationIcon() {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -213,10 +203,9 @@ export function NavigationIcon(props: any) {
   );
 }
 
-export function TypeIcon(props: any) {
+export function TypeIcon() {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -234,7 +223,7 @@ export function TypeIcon(props: any) {
   );
 }
 
-export function NextIcon(props: any) {
+export function NextIcon() {
   return (
     <a
       title="Vercel, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
@@ -246,13 +235,12 @@ export function NextIcon(props: any) {
         width="24"
         height="24"
         style={{ filter: 'grayscale(50%)' }}
-        {...props}
       />
     </a>
   );
 }
 
-export function PromIcon(props: any) {
+export function PromIcon() {
   return (
     <a
       title="Alexander Schwartz (ahus1)[1][2], Apache License 2.0 &lt;http://www.apache.org/licenses/LICENSE-2.0&gt;, via Wikimedia Common"
@@ -264,7 +252,6 @@ export function PromIcon(props: any) {
         width="24"
         height="24"
         style={{ filter: 'grayscale(50%)' }}
-        {...props}
       />
     </a>
   );

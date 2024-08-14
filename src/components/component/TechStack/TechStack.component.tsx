@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { RoughNotation } from 'react-rough-notation';
+import { useInView } from 'react-intersection-observer';
 import {
   ReactIcon,
   PythonIcon,
@@ -13,9 +15,7 @@ import {
   WindIcon,
   DatabaseIcon,
 } from '../../Icons/proggramingLanguage.icon';
-import { useInView } from 'react-intersection-observer';
-import { RoughNotation } from 'react-rough-notation';
-import { delayTiming } from '../homepage.component';
+import { DelayTiming } from '../homepage.utils';
 
 const techStack = [
   {
@@ -134,7 +134,8 @@ export default function TechStack() {
             My Tech Stack
           </h2>
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-black dark:text-white">
-            I'm proficient in a wide range of languages, frameworks, and tools.
+            I&apos;m proficient in a wide range of languages, frameworks, and
+            tools.{' '}
           </p>
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-black dark:text-white">
             <span className="font-bold  ">
@@ -173,7 +174,7 @@ export default function TechStack() {
                       type="highlight"
                       color="#007BFF"
                       show={inView}
-                      animationDelay={delayTiming(techIndex)}
+                      animationDelay={DelayTiming(techIndex)}
                     >
                       <h3 className="mt-4 text-lg font-semibold text-black dark:text-white">
                         {tech.name}

@@ -1,6 +1,6 @@
+import React, { useState, ChangeEvent } from 'react';
 import { Label } from '../../ui/label';
 import { Input } from '../../ui/input';
-import { useState, ChangeEvent } from 'react';
 import PopupDialog from '../PopupDialog/popupDialog.component';
 import { Textarea } from '../../ui/textarea';
 import { Button } from '../../ui/button';
@@ -43,8 +43,6 @@ export default function ContactMe() {
       setDialogTitle('Success🎉');
       setDialogDescription('Email sent successfully');
     } else {
-      console.log(response.status);
-      console.log(response);
       setDialogTitle('Uh ohh...❌');
       setDialogDescription('Error sending email');
     }
@@ -60,7 +58,7 @@ export default function ContactMe() {
               Contact Me
             </h2>
             <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 text-black dark:text-white">
-              {'Get in touch 😀'}
+              Get in touch 😀;
             </p>
           </div>
           <form className="grid gap-4 md:gap-6">

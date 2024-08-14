@@ -1,3 +1,13 @@
 {
-  "extends": ["next/core-web-vitals", "airbnb"]
+  "env": {
+    "jest": true
+  },
+  "extends": ["next/core-web-vitals", "airbnb", "prettier"],
+  "rules": {
+    "react/jsx-filename-extension": "off",
+    "import/prefer-default-export": "off", //this clashes with next route rules,
+    "import/extensions": "off",
+    "react/no-array-index-key": "off", //remove me if mutable arrayes are added
+    "import/no-extraneous-dependencies" :"off" //removed because this wants all testing libraries in depdendcies, i prefer in dev
+  }
 }

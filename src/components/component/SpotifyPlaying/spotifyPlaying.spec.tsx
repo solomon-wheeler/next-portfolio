@@ -1,6 +1,7 @@
+import React from 'react';
+
 import { render, screen, waitFor } from '@testing-library/react';
 import { SpotifyPlaying } from './spotifyPlaying.component';
-import React from 'react';
 import '@testing-library/jest-dom';
 
 describe('SpotifyPlaying Component', () => {

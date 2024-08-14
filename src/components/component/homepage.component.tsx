@@ -1,8 +1,11 @@
+import React from 'react';
 import { RoughNotation } from 'react-rough-notation';
 import { SpotifyPlaying } from './SpotifyPlaying/spotifyPlaying.component';
 import TechStack from './TechStack/TechStack.component';
 import ExampleProjects from './ExampleProjects/exampleProjects.component';
 import ContactMe from './ContactMe/contactMe.component';
+import { DelayTiming } from './homepage.utils';
+
 const modules = [
   { name: 'Computer systems architecture 1 & 2', mark: 81 },
   { name: 'Discrete mathematics and database', mark: 95 },
@@ -11,13 +14,6 @@ const modules = [
   { name: 'Artificial intelligence', mark: 84 },
   { name: 'Software processes and modelling', mark: 68 },
 ];
-
-const initialDelay = 500;
-const delayConst = 1000;
-
-export const delayTiming = (index: number) => {
-  return initialDelay + index * delayConst;
-};
 
 export default function Homepage() {
   return (
@@ -41,7 +37,7 @@ export default function Homepage() {
                   type="box"
                   color="#ADD8E6"
                   show={true}
-                  animationDelay={delayTiming(0)}
+                  animationDelay={DelayTiming(0)}
                 >
                   outgoing
                 </RoughNotation>
@@ -50,7 +46,7 @@ export default function Homepage() {
                   type="underline"
                   color="#ADD8E6"
                   show={true}
-                  animationDelay={delayTiming(1)}
+                  animationDelay={DelayTiming(1)}
                 >
                   highly motivated
                 </RoughNotation>
@@ -58,7 +54,7 @@ export default function Homepage() {
                   type="circle"
                   color="#ADD8E6"
                   show={true}
-                  animationDelay={delayTiming(2)}
+                  animationDelay={DelayTiming(2)}
                 >
                   , team worker
                 </RoughNotation>{' '}
@@ -67,7 +63,7 @@ export default function Homepage() {
                   type="underline"
                   color="#ADD8E6"
                   show={true}
-                  animationDelay={delayTiming(3)}
+                  animationDelay={DelayTiming(3)}
                 >
                   communication{' '}
                 </RoughNotation>
@@ -79,7 +75,7 @@ export default function Homepage() {
                   type="circle"
                   color="#ADD8E6"
                   show={true}
-                  animationDelay={delayTiming(4)}
+                  animationDelay={DelayTiming(4)}
                 >
                   enthusiasm{' '}
                 </RoughNotation>{' '}
