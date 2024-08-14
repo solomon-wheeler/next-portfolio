@@ -34,7 +34,7 @@ export const SpotifyPlaying = () => {
           </h2>
           <div className="flex items-center">
             {!isLoading && albumCover && (
-              <div className="relative flex-grow w-10 h-10 sm:w-2 sm:h-2 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40 mr-4 spin-slow">
+              <div className="relative w-10 h-10 sm:w-2 sm:h-2 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40 mr-4 spin-slow">
                 <img
                   src={albumCover}
                   alt="Album Cover"

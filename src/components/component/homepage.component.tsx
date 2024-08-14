@@ -23,7 +23,6 @@ export const delayTiming = (index: number) => {
 export default function Homepage() {
   return (
     <>
-      <Header />
       <div className="bg-gray-50 dark:bg-gray-900 py-12 pt-16 lg:py-24 xl:py-32 px-2">
         <div className="container px-4 md:px-6 pt-12">
           <div className="grid gap-6 md:gap-8 lg:gap-10">
