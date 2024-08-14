@@ -24,7 +24,7 @@ export default function Homepage() {
         <div className="container px-4 md:px-6 pt-12">
           <div className="grid gap-6 md:gap-8 lg:gap-10">
             <div className="space-y-2">
-              <h1 className="text-3xl pb-2  font-bold tracking-tighter sm:text-4xl md:text-5xl text-black dark:text-white">
+              <h1 className="text-3xl pb-2 font-bold tracking-tighter sm:text-4xl md:text-5xl text-black dark:text-white h-24 flex items-center justify-center">
                 <Typewriter
                   options={{
                     strings: [
@@ -35,9 +35,8 @@ export default function Homepage() {
                     autoStart: true,
                     loop: true,
                   }}
-                />{' '}
+                />
               </h1>
-              {/* </div> */}
               <h6 className="inline text-lg font-semibold text-black dark:text-white">
                 Full Stack Developer
               </h6>
