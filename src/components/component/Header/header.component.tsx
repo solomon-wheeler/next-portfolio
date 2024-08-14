@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Toggle } from '@/components/ui/toggle';
+import { Toggle } from '../../ui/toggle';
 
 import {
   HomeIcon,
@@ -8,7 +8,7 @@ import {
   LinkedinIcon,
   GitIcon,
   SunIcon,
-} from '@/components/Icons/nav.icon';
+} from '../../Icons/nav.icon';
 import { useTheme } from 'next-themes';
 
 export default function Header() {
