@@ -58,7 +58,7 @@ export default function ContactMe() {
               Contact Me
             </h2>
             <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 text-black dark:text-white">
-              Get in touch 😀;
+              Get in touch 😀
             </p>
           </div>
           <form className="grid gap-4 md:gap-6">
