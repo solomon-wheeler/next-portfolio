@@ -15,7 +15,7 @@ import {
   WindIcon,
   DatabaseIcon,
 } from '../../Icons/proggramingLanguage.icon';
-import { DelayTiming } from '../homepage.utils';
+import { DelayTiming } from '../Homepage/homepage.utils';
 
 const techStack = [
   {

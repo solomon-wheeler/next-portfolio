@@ -1,10 +1,12 @@
 import React from 'react';
 import { RoughNotation } from 'react-rough-notation';
-import { SpotifyPlaying } from './SpotifyPlaying/spotifyPlaying.component';
-import TechStack from './TechStack/TechStack.component';
-import ExampleProjects from './ExampleProjects/exampleProjects.component';
-import ContactMe from './ContactMe/contactMe.component';
-import { DelayTiming } from './homepage.utils';
+import { SpotifyPlaying } from '../SpotifyPlaying/spotifyPlaying.component';
+import TechStack from '../TechStack/TechStack.component';
+import ExampleProjects from '../ExampleProjects/exampleProjects.component';
+import ContactMe from '../ContactMe/contactMe.component';
+import { DelayTimingWithInitial } from './homepage.utils';
+import './homepage.style.css';
+import Typewriter from 'typewriter-effect';
 
 const modules = [
   { name: 'Computer systems architecture 1 & 2', mark: 81 },
@@ -22,9 +24,21 @@ export default function Homepage() {
         <div className="container px-4 md:px-6 pt-12">
           <div className="grid gap-6 md:gap-8 lg:gap-10">
             <div className="space-y-2">
+              {/* <div className="typewriter"> */}
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black dark:text-white">
-                👋 I&apos;m Solomon Wheeler
+                <Typewriter
+                  options={{
+                    strings: [
+                      'Hi',
+                      `I'm Solomon Wheeler`,
+                      'Welcome to my portfolio',
+                    ],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />{' '}
               </h1>
+              {/* </div> */}
               <h6 className="inline text-lg font-semibold text-black dark:text-white">
                 Full Stack Developer
               </h6>
@@ -37,7 +51,7 @@ export default function Homepage() {
                   type="box"
                   color="#ADD8E6"
                   show={true}
-                  animationDelay={DelayTiming(0)}
+                  animationDelay={DelayTimingWithInitial(0)}
                 >
                   outgoing
                 </RoughNotation>
@@ -46,7 +60,7 @@ export default function Homepage() {
                   type="underline"
                   color="#ADD8E6"
                   show={true}
-                  animationDelay={DelayTiming(1)}
+                  animationDelay={DelayTimingWithInitial(1)}
                 >
                   highly motivated
                 </RoughNotation>
@@ -54,7 +68,7 @@ export default function Homepage() {
                   type="circle"
                   color="#ADD8E6"
                   show={true}
-                  animationDelay={DelayTiming(2)}
+                  animationDelay={DelayTimingWithInitial(2)}
                 >
                   , team worker
                 </RoughNotation>{' '}
@@ -63,7 +77,7 @@ export default function Homepage() {
                   type="underline"
                   color="#ADD8E6"
                   show={true}
-                  animationDelay={DelayTiming(3)}
+                  animationDelay={DelayTimingWithInitial(3)}
                 >
                   communication{' '}
                 </RoughNotation>
@@ -75,7 +89,7 @@ export default function Homepage() {
                   type="circle"
                   color="#ADD8E6"
                   show={true}
-                  animationDelay={DelayTiming(4)}
+                  animationDelay={DelayTimingWithInitial(4)}
                 >
                   enthusiasm{' '}
                 </RoughNotation>{' '}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './spotifyPlaying.styles.css';
+import './spotifyPlaying.style.css';
 
 export const SpotifyPlaying = () => {
   const [song, setSong] = useState('Getting data from spotify...');
