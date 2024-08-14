@@ -24,8 +24,7 @@ export default function Homepage() {
         <div className="container px-4 md:px-6 pt-12">
           <div className="grid gap-6 md:gap-8 lg:gap-10">
             <div className="space-y-2">
-              {/* <div className="typewriter"> */}
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black dark:text-white">
+              <h1 className="text-3xl pb-2  font-bold tracking-tighter sm:text-4xl md:text-5xl text-black dark:text-white">
                 <Typewriter
                   options={{
                     strings: [
