@@ -113,7 +113,7 @@ const techStack = [
 
 export default function TechStack() {
   const [ref, inView] = useInView({
-    triggerOnce: false, // Change this to false if you want the animation to trigger again whenever it comes in view
+    triggerOnce: false,
   });
 
   const [openSections, setOpenSections] = useState([false, false, false]);
