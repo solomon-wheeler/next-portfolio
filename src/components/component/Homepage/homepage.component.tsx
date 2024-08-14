@@ -1,7 +1,7 @@
 import React from 'react';
 import { RoughNotation } from 'react-rough-notation';
 import { SpotifyPlaying } from '../SpotifyPlaying/spotifyPlaying.component';
-import TechStack from '../TechStack/TechStack.component';
+import TechStack from '../TechStack/techStack.component';
 import ExampleProjects from '../ExampleProjects/exampleProjects.component';
 import ContactMe from '../ContactMe/contactMe.component';
 import { DelayTimingWithInitial } from './homepage.utils';
