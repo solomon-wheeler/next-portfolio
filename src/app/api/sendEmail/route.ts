@@ -1,4 +1,3 @@
-import { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 
 export async function POST(req: any) {
@@ -6,15 +5,15 @@ export async function POST(req: any) {
   const { name, email, message } = body;
 
   if (req.method === 'POST') {
-    let transporter = nodemailer.createTransport({
-      service: 'gmail', // replace with your email service
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
       auth: {
-        user: process.env.EMAIL, // replace with your email
+        user: process.env.EMAIL,
         pass: process.env.PASSWORD,
       },
     });
 
-    let mailOptions = {
+    const mailOptions = {
       from: process.env.EMAIL,
       to: 'solly.wheeler@gmail.com',
       subject: `Email from ${name}`,
@@ -25,7 +24,9 @@ export async function POST(req: any) {
       info = await transporter.sendMail(mailOptions);
     } catch (error) {
       if (error instanceof Error) {
-        return new Response(`Error: ${error.message}, Info: ${info}`, {
+        console.error(`Error: ${error}`);
+        console.error(`Info: ${info}`);
+        return new Response(`An error occured whilst sending email`, {
           status: 500,
         });
       } else {
@@ -34,9 +35,6 @@ export async function POST(req: any) {
         });
       }
     }
-    return new Response('Hello', {
-      status: 200,
-    });
   } else {
     return new Response('Only post requests allowed', {
       status: 405,

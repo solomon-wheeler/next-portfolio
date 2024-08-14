@@ -1,6 +1,5 @@
 import { RoughNotation } from 'react-rough-notation';
 import { SpotifyPlaying } from './SpotifyPlaying/spotifyPlaying.component';
-import Header from './Header/header.component';
 import TechStack from './TechStack/TechStack.component';
 import ExampleProjects from './ExampleProjects/exampleProjects.component';
 import ContactMe from './ContactMe/contactMe.component';
