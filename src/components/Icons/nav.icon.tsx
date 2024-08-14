@@ -1,17 +1,16 @@
 'use client';
 
+import React from 'react';
 import { useTheme } from 'next-themes';
 
-const getIconColour = (theme: string | undefined): string => {
-  return theme === 'dark' ? '#ffffff' : '#000000';
-};
+const getIconColour = (theme: string | undefined): string =>
+  theme === 'dark' ? '#ffffff' : '#000000';
 
-export function GitIcon(props: any) {
+export function GitIcon() {
   const { theme } = useTheme();
   const iconColor = getIconColour(theme);
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -27,12 +26,11 @@ export function GitIcon(props: any) {
   );
 }
 
-export function LinkedinIcon(props: any) {
+export function LinkedinIcon() {
   const { theme } = useTheme();
   const iconColor = getIconColour(theme);
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -50,12 +48,11 @@ export function LinkedinIcon(props: any) {
   );
 }
 
-export function MoonIcon(props: any) {
+export function MoonIcon() {
   const { theme } = useTheme();
   const iconColor = getIconColour(theme);
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -70,12 +67,11 @@ export function MoonIcon(props: any) {
     </svg>
   );
 }
-export function SunIcon(props: any) {
+export function SunIcon() {
   const { theme } = useTheme();
   const iconColor = getIconColour(theme);
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -99,13 +95,12 @@ export function SunIcon(props: any) {
   );
 }
 
-export function HomeIcon(props: any) {
+export function HomeIcon() {
   const { theme } = useTheme();
   const iconColor = getIconColour(theme);
 
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"

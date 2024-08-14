@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Dialog,
   DialogContent,
@@ -5,20 +6,14 @@ import {
   DialogHeader,
   DialogTitle,
 } from '../../ui/dialog';
-
-type DialogDemoProps = {
-  dialogOpen: boolean;
-  setDialogOpen: (open: boolean) => void;
-  dialogDescription: string;
-  dialogTitle: string;
-};
+import { PopupDialogProp } from './popupDialog.props';
 
 export default function PopupDialog({
   dialogOpen,
   setDialogOpen,
   dialogDescription,
   dialogTitle,
-}: Readonly<DialogDemoProps>) {
+}: Readonly<PopupDialogProp>) {
   return (
     <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
       <DialogContent className="sm:max-w-[425px]">
