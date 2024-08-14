@@ -23,7 +23,7 @@ export default function Homepage() {
           <div className="grid gap-6 md:gap-8 lg:gap-10">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black dark:text-white">
-                👋 I’m Solomon Wheeler
+                👋 I&Apos;m Solomon Wheeler
               </h1>
               <h6 className="inline text-lg font-semibold text-black dark:text-white">
                 Full Stack Developer
