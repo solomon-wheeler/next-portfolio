@@ -9,8 +9,12 @@ import KubernetesLogo from '../../../public/Kubernetes_logo_without_workmark.svg
 import NextIconImage from '../../../public/Nextjs-logo.svg';
 import PromIconImage from '../../../public/Prometheus_software_logo.svg';
 import GithubIconImage from '../../../public/Octicons-mark-github.svg';
+import { getIconColour } from './nav.icon';
+import { useTheme } from 'next-themes';
 
 export function DatabaseIcon() {
+  const { theme } = useTheme();
+  const iconColor = getIconColour(theme);
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +22,7 @@ export function DatabaseIcon() {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke={iconColor}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -31,6 +35,8 @@ export function DatabaseIcon() {
 }
 
 export function WindIcon() {
+  const { theme } = useTheme();
+  const iconColor = getIconColour(theme);
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +44,7 @@ export function WindIcon() {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke={iconColor}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -84,6 +90,8 @@ export function PythonIcon() {
   );
 }
 export function CodeIcon() {
+  const { theme } = useTheme();
+  const iconColor = getIconColour(theme);
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +99,7 @@ export function CodeIcon() {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke={iconColor}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
