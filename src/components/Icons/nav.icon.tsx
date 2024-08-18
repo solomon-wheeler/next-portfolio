@@ -3,7 +3,7 @@
 import React from 'react';
 import { useTheme } from 'next-themes';
 
-const getIconColour = (theme: string | undefined): string =>
+export const getIconColour = (theme: string | undefined): string =>
   theme === 'dark' ? '#ffffff' : '#000000';
 
 export function GitIcon() {
