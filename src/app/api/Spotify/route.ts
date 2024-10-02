@@ -68,7 +68,10 @@ export async function GET(req: any) {
         }),
         {
           status: 200,
-          headers: { 'Content-Type': 'application/json' },
+          headers: {
+            'Content-Type': 'application/json',
+            'Cache-Control': 'no-store, max-age=0',
+          },
         },
       );
     } else {
@@ -99,7 +102,10 @@ export async function GET(req: any) {
       }),
       {
         status: 200,
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Cache-Control': 'no-store, max-age=0',
+        },
       },
     );
   } catch (error) {
@@ -108,7 +114,10 @@ export async function GET(req: any) {
       JSON.stringify({ error: 'There was an error calling the spotify api' }),
       {
         status: 500,
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Cache-Control': 'no-store, max-age=0',
+        },
       },
     );
   }
