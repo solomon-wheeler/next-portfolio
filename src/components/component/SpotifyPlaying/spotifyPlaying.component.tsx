@@ -10,7 +10,7 @@ export const SpotifyPlaying = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/Spotify');
+        const response = await fetch('/api/Spotify', { cache: 'no-store' });
         const data = await response.json();
         setSong(data.song);
         setArtist(data.artist);

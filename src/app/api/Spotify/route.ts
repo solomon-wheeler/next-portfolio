@@ -122,3 +122,5 @@ export async function GET(req: any) {
     );
   }
 }
+
+export const revalidate = 0;
