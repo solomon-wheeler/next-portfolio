@@ -6,6 +6,12 @@ export default function Qualifications() {
     { name: 'Mathematics for computation', mark: 76 },
     { name: 'Artificial intelligence', mark: 84 },
     { name: 'Software processes and modelling', mark: 68 },
+    { name: 'Extended systems project', mark: 82 },
+    { name: 'Machine learning', mark: 92 },
+    { name: 'Foundations of computation', mark: 84 },
+    { name: 'Visual computing', mark: 75 },
+    { name: 'Data structures and algorithms', mark: 98 },
+    { name: 'Human-computer interaction and user experience', mark: 84 },
   ];
 
   return (
