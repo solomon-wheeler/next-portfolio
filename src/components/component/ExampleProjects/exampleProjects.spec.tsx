@@ -20,7 +20,7 @@ describe('ExampleProjects', () => {
     render(<ExampleProjects />);
 
     const projectDescriptions = screen.getAllByLabelText(/description/i);
-    expect(projectDescriptions).toHaveLength(4);
+    expect(projectDescriptions).toHaveLength(5);
     expect(projectDescriptions[0]).toHaveTextContent(
       /sudoku solving implementation/i,
     );

@@ -52,13 +52,13 @@ export default function ExampleProjects() {
                 A spam filter which used naive bayes based on number of
                 keywords, to predict wether an item was spam or not. It then
                 used k-fold cross validation on our training/test dataset to
-                workout a predicted accurary for the filter
+                workout a predicted accuracy for the filter
               </p>
             </div>
             <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
               <Link
                 className="font-medium underline text-black dark:text-white"
-                href="#"
+                href="https://github.com/solomon-wheeler/graph_MST"
                 aria-label="project"
               >
                 Graph & Minimum Spanning tree
@@ -77,7 +77,7 @@ export default function ExampleProjects() {
             <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
               <Link
                 className="font-medium underline text-black dark:text-white"
-                href="#"
+                href="https://devpost.com/software/hanu-man"
               >
                 Mental Health Hackathon Project{' '}
               </Link>
@@ -90,6 +90,22 @@ export default function ExampleProjects() {
                 and get messages from others if you&apos;re having a rough day.
                 Includes tracking of how you&apos;re feeling over time, so you
                 can see your progress
+              </p>
+            </div>
+            <div className="p-4 bg-white shadow-md rounded-md dark:bg-gray-800">
+              <Link
+                className="font-medium underline text-black dark:text-white"
+                href="https://www.timebox.solomonwheeler.co.uk"
+              >
+                Timebox day planner{' '}
+              </Link>
+              <p
+                role="paragraph"
+                aria-label="description"
+                className="text-sm text-gray-500 text-black dark:text-white"
+              >
+                A simple application to allow users to plan their day, built
+                using Next-JS + Tailwind + Shadcn UI
               </p>
             </div>
           </div>
